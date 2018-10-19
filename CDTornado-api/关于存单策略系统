@@ -1,0 +1,5 @@
+关于存单策略系统
+后端ws服务端层面：
+1 websocked
+2 tornado
+3 flask_socketio

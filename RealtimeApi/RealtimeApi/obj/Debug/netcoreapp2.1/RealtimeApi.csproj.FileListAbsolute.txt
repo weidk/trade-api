@@ -1,0 +1,15 @@
+D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\bin\Debug\netcoreapp2.1\RealtimeApi.deps.json
+D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\bin\Debug\netcoreapp2.1\RealtimeApi.runtimeconfig.json
+D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\bin\Debug\netcoreapp2.1\RealtimeApi.runtimeconfig.dev.json
+D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\bin\Debug\netcoreapp2.1\RealtimeApi.dll
+D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\obj\Debug\netcoreapp2.1\RealtimeApi.csprojAssemblyReference.cache
+D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\obj\Debug\netcoreapp2.1\RealtimeApi.csproj.CoreCompileInputs.cache
+D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\obj\Debug\netcoreapp2.1\RealtimeApi.RazorAssemblyInfo.cache
+D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\obj\Debug\netcoreapp2.1\RealtimeApi.RazorAssemblyInfo.cs
+D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\obj\Debug\netcoreapp2.1\RealtimeApi.AssemblyInfoInputs.cache
+D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\obj\Debug\netcoreapp2.1\RealtimeApi.AssemblyInfo.cs
+D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\obj\Debug\netcoreapp2.1\RealtimeApi.RazorTargetAssemblyInfo.cache
+D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\bin\Debug\netcoreapp2.1\appsettings.json
+D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\bin\Debug\netcoreapp2.1\RealtimeApi.pdb
+D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\obj\Debug\netcoreapp2.1\RealtimeApi.dll
+D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\obj\Debug\netcoreapp2.1\RealtimeApi.pdb
