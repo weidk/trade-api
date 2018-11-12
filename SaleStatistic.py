@@ -137,3 +137,41 @@ def ClassifyTraderData(Df):
     RawDf.columns = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
     RawDf = RawDf.reset_index()
     return RawDf.to_json(orient="records")
+
+# ----------------------------   机构-交易员对应关系气泡图   ---------------------------
+def BubbleData(start,end):
+    Df = pd.read_sql(
+        "select * from openquery(IBOND,'select * from ( select  t.organizationname,username,sum(t.allocationamt)/10000 amt  from ibond.dsc_bondsaleprofit t where to_char(t.saledate, ''yyyy-mm-dd'') >= ''" + start + "'' and  to_char(t.saledate, ''yyyy-mm-dd'') <= ''" + end + "'' and allocationamt>0     group by  organizationname,username  order by amt desc ) where rownum<=50')",
+        Engine)
+    Df.AMT = Df.AMT.astype('float')
+    Df = Df.sort('AMT')
+    return Df.to_json(orient="records")
+
+# 获取银行关系图
+def BankBubbleData(start,end):
+    Df = pd.read_sql(
+        "select * from openquery(IBOND,'select * from ( select  t.organizationname,username,count(1) amt  from ibond.dsc_bondsaleprofit t where to_char(t.saledate, ''yyyy-mm-dd'') >= ''" + start + "'' and  to_char(t.saledate, ''yyyy-mm-dd'') <= ''" + end + "''    and organizationname like ''%银行%''   group by  organizationname,username  order by amt desc ) where rownum<=50')",
+        Engine)
+    Df.AMT = Df.AMT.astype('float')
+    Df = Df.sort('AMT')
+
+    return Df.to_json(orient="records")
+
+# 获取银行地理分布
+def BankGeoData(start,end):
+    Df = pd.read_sql(
+        # "select * from openquery(IBOND,'select b.name, sum(t.allocationamt)/10000 amt  from ibond.dsc_bondsaleprofit t inner join DSC_BASIC_ORGANIZATION a  on t.organizationname = a.name  inner join smp_dhzq_new.tBM_Bas_Province b on a.province = b.id  where t.organizationname like ''%银行%''  and to_char(t.saledate, ''yyyy-mm-dd'') >= ''" + start + "'' and  to_char(t.saledate, ''yyyy-mm-dd'') <= ''" + end + "'' and allocationamt>0  group  by b.name order by amt desc')",
+        "select * from openquery(IBOND,'select b.name, count(1) amt  from ibond.dsc_bondsaleprofit t inner join DSC_BASIC_ORGANIZATION a  on t.organizationname = a.name  inner join smp_dhzq_new.tBM_Bas_Province b on a.province = b.id  where t.organizationname like ''%银行%''  and to_char(t.saledate, ''yyyy-mm-dd'') >= ''" + start + "'' and  to_char(t.saledate, ''yyyy-mm-dd'') <= ''" + end + "''   group  by b.name order by amt desc')",
+        Engine)
+    Df.AMT = Df.AMT.astype('float')
+    Df.NAME = Df.NAME.str.replace('省','')
+    Df.NAME = Df.NAME.str.replace("\(非深圳\）",'')
+    # Df.set_value(Df[Df['NAME'] == '广东'].index[0],'AMT',Df[Df['NAME'] == '广东'].iloc[0,1] + Df[Df['NAME']=='深圳'].iloc[0,1])
+    return Df.to_json(orient="records")
+
+def QueryTraderBankTs(tradername,org):
+    Df = pd.read_sql("select * from openquery(IBOND,'select to_char(t.saledate, ''yyyy-mm'') 月份,count(1) 申购次数  from ibond.dsc_bondsaleprofit t where  organizationname = ''"+org+"''  and username=''"+tradername+"''   group by to_char(t.saledate, ''yyyy-mm'')  order by 月份 ')",Engine)
+    Df['申购次数'] = Df['申购次数'].astype('float')
+    Rst = ClassifyTraderData(Df)
+    return Rst
+

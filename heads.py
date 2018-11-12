@@ -25,6 +25,12 @@ EngineIS = DB.getEngine('10.28.7.43', 'sa', 'tcl+nftx', 'InvestSystem')
 import Tools.MongoHelper as MG
 crmDb = MG._connect_mongo("10.28.7.35",39362,"datacenter","datacenter","datacenter")
 
+import redis
+pool = redis.ConnectionPool(host='localhost', port=6379, decode_responses=True)
+r = redis.Redis(connection_pool=pool)
+
+
+import Global as G
 
 import quoteStatus as QS
 import bondLend as BD
@@ -38,3 +44,5 @@ import SelfMarketMaker as SM
 import SystemMonitor as SysMoniotor
 import HidenCredit as HC
 import SaleStatistic as Sale
+
+import Initial as Ini

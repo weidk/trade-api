@@ -19,7 +19,7 @@ def CalFinalScore(initiator,date):
 
     # 计算期限分数
     def getTermscore(code):
-        df = pd.read_sql("select term from [172.18.3.42,14331].[msnRobot].[dbo].[NewBond]  where code = '"+code+"'",Engine)
+        df = pd.read_sql("select term from [10.28.7.42,14331].[msnRobot].[dbo].[NewBond]  where code = '"+code+"'",Engine)
         term = df.ix[0,0]
         if term<=1:
             termScore = 1

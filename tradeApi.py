@@ -372,12 +372,50 @@ def GetInsAllocateamtCredit():
     except:
         pass
 
+# ----- 机构交易员对应关系 ------
+@app.route('/api/traderandins', methods=['POST'])
+def TraderandIns():
+    try:
+        date = request.json
+        rst = Sale.BubbleData(date['start'], date['end'])
+        return rst
+    except:
+        pass
 
+# ----- 银行交易员对应关系 ------
+@app.route('/api/banktraderrelative', methods=['POST'])
+def TraderandBanks():
+    try:
+        date = request.json
+        rst = Sale.BankBubbleData(date['start'], date['end'])
+        return rst
+    except:
+        pass
+
+# ----- 银行客户的地理分布 ------
+@app.route('/api/banksgeo', methods=['POST'])
+def BankGeo():
+    try:
+        date = request.json
+        rst = Sale.BankGeoData(date['start'], date['end'])
+        return rst
+    except:
+        pass
+
+@app.route('/api/traderbankts', methods=['POST'])
+def GetTraderBanksTsData():
+    try:
+        date = request.json
+        df = Sale.QueryTraderBankTs(date['name'],date['org'])
+        return df
+    except:
+        pass
 # *******************************************************************
 # *******************************************************************
 if __name__ == '__main__':
     # app.run()
     try:
+        # G.INSTYPEDICT = Ini.InitialAll()
         http_server = WSGIServer(('', 6000), app)
         http_server.serve_forever()
     except Exception:

@@ -39,8 +39,15 @@ def CalCreditChange(Df):
 
 # 找到最近有数据的交易日
 def FindTradeDay(day):
-    dayDf = pd.read_sql("select * from openquery(WINDNEW,'select  max(t.trade_dt) td from CBondCurveMembersCNBD t where trade_dt<=''"+day+"'' ')",Engine)
-    return dayDf.ix[0,0]
+    dayKey = day
+    dayValue = r.get(dayKey)
+    if dayValue==None:
+        dayDf = pd.read_sql("select * from openquery(WINDNEW,'select  max(t.trade_dt) td from CBondCurveMembersCNBD t where trade_dt<=''"+day+"'' ')",Engine)
+        r.set(dayKey, dayDf.ix[0,0])
+        return dayDf.ix[0,0]
+    else:
+        return dayValue
+
 
 def HidenCreditBag(start,end):
     start = FindTradeDay(start)
@@ -48,14 +55,21 @@ def HidenCreditBag(start,end):
     if start == end:
         import datetime
         start = (datetime.datetime.strptime(start, "%Y%m%d").date() + datetime.timedelta(days=-1)).strftime('%Y%m%d')
-    start = FindTradeDay(start)
-    Df = QueryTermHidenCredit(start, end)
-    if Df.shape[0]==0:
-        Rst = Df
+        start = FindTradeDay(start)
+    hidenKey = start + '-' + end
+    hidenValue = r.get(hidenKey)
+    if hidenValue==None:
+        Df = QueryTermHidenCredit(start, end)
+        if Df.shape[0]==0:
+            Rst = Df
+            return Rst.to_json(orient="records")
+        else:
+            Rst = CalCreditChange(Df)
+            hidenValue = Rst.to_json(orient="records")
+            r.set(hidenKey, hidenValue)
+            return hidenValue
     else:
-        Rst = CalCreditChange(Df)
-
-    return Rst.to_json(orient="records")
+        return hidenValue
 
 # ----------------   隐含评级调整历史  ---------------------
 def QueryHidenCreditHistory(code):
