@@ -1,5 +1,7 @@
 from heads import *
 from functools import wraps
+
+
 app = Flask(__name__)
 
 def allow_cross_domain(fun):
@@ -38,6 +40,34 @@ def DeletePosition():
     except:
         pass
 
+# --------------------------------------------------------------------------------
+
+# 新增一条待提醒事项
+@app.route('/api/posttodo', methods=['POST'])
+def CreatTodo():
+    try:
+        data = request.json
+        df = json_normalize(data)
+        TD.createNewTodo(df)
+    except:
+        pass
+
+# 查询所有待提醒事项
+@app.route('/api/todo')
+def GetTodo():
+    df = TD.getAllTodo()
+    return df
+
+# 删除持仓
+@app.route('/api/deletetodo',methods=['POST'])
+def DeleteTodo():
+    try:
+        data = request.json
+        TD.deleteTodo(data)
+    except:
+        pass
+
+# --------------------------------------------------------------------------------
 # 一级发行收益率管道图
 @app.route('/api/issueyield', methods=['POST'])
 def CalIssueYield():
@@ -60,6 +90,16 @@ def GetCreditMS():
     df = MS.ReadCreditScore()
     return df
 
+# 结算持仓
+@app.route('/api/xbondcounter', methods=['POST'])
+def GetXBondCounterData():
+    try:
+        data = request.json
+        df = MS.XBondCounter(data['insname'])
+        return df
+    except:
+        pass
+
 # CD持仓
 @app.route('/api/cdpositon')
 def GetCDPosition():
@@ -71,6 +111,16 @@ def GetCDPosition():
 def GetBPMPosition():
     df = CD.ReadBPMPosition()
     return df
+
+# 结算持仓
+@app.route('/api/settledownpositon', methods=['POST'])
+def GetSettlePosition():
+    try:
+        df = CD.QuerySettlePosition(request.json)
+        return df
+    except:
+        pass
+
 
 # 报表——利润走势图
 @app.route('/api/reprotprofit', methods=['POST'])
@@ -108,6 +158,25 @@ def CalMarketDealTs():
     except:
         pass
 
+@app.route('/api/marketdealts1', methods=['POST'])
+def CalMarketDealTs1():
+    try:
+        date = request.json
+        rst = MD.QueryTSData1(date['ins'], date['type'])
+        return rst
+    except:
+        pass
+
+# 现券市场成交走势图新版
+@app.route('/api/marketdealtsnew', methods=['POST'])
+def CalMarketDealTsNew():
+    try:
+        date = request.json
+        rst = MD.QueryTSDataNew(date['ins'], date['type'], date['term'])
+        return rst
+    except:
+        pass
+
 # 现券市场成交——期限
 @app.route('/api/markettermdeal', methods=['POST'])
 def CalMarketTermDealAmt():
@@ -118,12 +187,32 @@ def CalMarketTermDealAmt():
     except:
         pass
 
+# 现券市场成交——券种
+@app.route('/api/marketdealnew', methods=['POST'])
+def CalMarketDealAmtNew():
+    try:
+        date = request.json
+        rst = MD.NewData(date['start'], date['end'])
+        return rst
+    except:
+        pass
+# -------------------------------------------------------------------
+
 # 债券借贷
 @app.route('/api/bondlend', methods=['POST'])
 def GetBondLenddata():
     try:
         code = request.json
         rst = BD.bondLendBag(code)
+        return rst
+    except:
+        pass
+
+# 国开借贷图
+@app.route('/api/bondlendgk')
+def GetBondLenddataGK():
+    try:
+        rst = BD.bondLendBagGK()
         return rst
     except:
         pass
@@ -410,6 +499,154 @@ def GetTraderBanksTsData():
         return df
     except:
         pass
+
+# ------------------ 收益率曲线矩阵  ---------------------
+@app.route('/api/curvemat')
+def GetCurvemat():
+    try:
+        df = CM.QueryLatestMat()
+        return df
+    except:
+        pass
+
+# 相对价值曲线
+@app.route('/api/reletivecurve', methods=['POST'])
+def GetReletiveCurve():
+    try:
+        date = request.json
+        df = CM.ReadRelativePrice(date['start'])
+        return df
+    except:
+        pass
+
+# 绝对价值曲线
+@app.route('/api/absolutecurve', methods=['POST'])
+def GetAbsoluteCurve():
+    try:
+        date = request.json
+        rst = CM.ReadAbsolutePrice(date['start'], date['end'])
+        return rst
+    except:
+        pass
+
+# -----------------  XBOND日内交易报表  -------------------------
+@app.route('/api/xbondreport')
+def GetXBond():
+    try:
+        df = XBond.QueryXBond()
+        return df
+    except:
+        pass
+
+# -----------------  大事件  -------------------------
+@app.route('/api/bignews')
+def GetBigNews():
+    try:
+        df = Review.QueryBigNews(G.BIGNEWS)
+        return df
+    except:
+        pass
+
+@app.route('/api/bignewsnote')
+def GetBigNewsNote():
+    try:
+        df = Review.QueryBigNewsNote(G.BIGNEWS)
+        return df
+    except:
+        pass
+
+
+# ------------------------   一级资质和情绪指数  -------------------------------
+# ----- 一级资质指数 ------
+@app.route('/api/qualification', methods=['POST'])
+def IssueQualification():
+    try:
+        date = request.json
+        rst = NB.QualificationIndex(date['start'],date['end'])
+        return rst
+    except:
+        pass
+
+# ----- 一级情绪指数 ------
+@app.route('/api/emotion', methods=['POST'])
+def IssueEmotion():
+    try:
+        date = request.json
+        rst = NB.EmotionIndex(date['start'], date['end'])
+        return rst
+    except:
+        pass
+
+# ----- 异常倍数 ------
+@app.route('/api/abnormal', methods=['POST'])
+def FindAbnormal():
+    try:
+        date = request.json
+        rst = NB.AbnormalNumber(date['start'], date['end'])
+        return rst
+    except:
+        pass
+
+
+# ------------------------   纯债基金指数  -----------------------------
+@app.route('/api/purebondindex', methods=['POST'])
+def PureBond():
+    try:
+        date = request.json
+        rst = LongBond.LBIndex(date['start'], date['end'])
+        return rst
+    except:
+        pass
+
+# ------------------------   期货持仓变动  -----------------------------
+@app.route('/api/futurepositionchange', methods=['POST'])
+def PostFuturePosChange():
+    try:
+        date = request.json
+        rst = FuturePos.ReadFuturePos(date['start'], date['end'])
+        return rst
+    except:
+        pass
+
+# 主力持仓走势
+@app.route('/api/futurepositionts', methods=['POST'])
+def PostMainPositionTs():
+    try:
+        data = request.json
+        rst = FuturePos.QueryMainPosition(data['start'], data['end'], data['insname'])
+        return rst
+    except:
+        pass
+
+# 主力净持仓走势
+@app.route('/api/futurenetpositionts', methods=['POST'])
+def PostNetMainPositionTs():
+    try:
+        data = request.json
+        rst = FuturePos.QueryMainNetPosition(data['start'], data['end'], data['insname'])
+        return rst
+    except:
+        pass
+
+# ------------------------   宏观回测  -----------------------------
+@app.route('/api/review', methods=['POST'])
+def MacroReview():
+    try:
+        date = request.json
+        rst = ReStrategy.ReviewBag(date['data'])
+        return rst
+    except:
+        pass
+
+# ------------------------   预测指标  -----------------------------
+@app.route('/api/xbondindex')
+def XBondPredit():
+    try:
+        rst = Predit.XBondIndex()
+        return rst
+    except:
+        pass
+
 # *******************************************************************
 # *******************************************************************
 if __name__ == '__main__':
@@ -421,3 +658,5 @@ if __name__ == '__main__':
     except Exception:
         http_server = WSGIServer(('', 6000), app)
         http_server.serve_forever()
+
+

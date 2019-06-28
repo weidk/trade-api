@@ -1,4 +1,4 @@
-from heads import *
+﻿from heads import *
 
 def Func(item):
     DF = pd.read_excel(item)
@@ -29,5 +29,6 @@ for item in Listfile:
     try:
         if item.endswith('.xls'):
             Func(item)
+            shutil.move(item, ".\\old\\"+item)
     except:
         print(item)

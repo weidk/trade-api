@@ -123,7 +123,8 @@ namespace RealtimeApi.Funcs
                 Config.db.Open();
             }
             //string sql = "select a.code,a.yield,a.dealtime from [VirtualExchange].[dbo].[IBHQ] a inner join (select code,max(dealtime) dealtime FROM [VirtualExchange].[dbo].[IBHQ] where dealtime > '" + Config.Dtime + "'   group by code) b on a.code = b.code and a.dealtime = b.dealtime order by a.dealtime ";
-            string sql = "select code,yield,dealtime,id from [QBDB].[dbo].[QBTRADEVIEW] where id>"+Config.id+" order by id ";
+           // string sql = "select code,yield,dealtime,id from [QBDB].[dbo].[QBTRADEVIEW] where id>"+Config.id+" order by id ";
+            string sql = "select * from openquery(QB,'select code,yield,dealtime,id from QBTRADEVIEW where id>  " + Config.id + " order by id ')";
             SqlDataAdapter DataAdapter = new SqlDataAdapter(sql, Config.db);
             DataTable Dt = new DataTable();
             DataAdapter.Fill(Dt);

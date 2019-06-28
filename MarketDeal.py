@@ -2,7 +2,7 @@ from heads import *
 
 
 def TrimTypeData(startDate,endDate):
-    sonDf = pd.read_sql("select * from [VirtualExchange].[dbo].[BondTypeNetAmt]  where Date>='"+startDate+"' and   Date<='"+endDate+"' order by Date", Engine)
+    sonDf = pd.read_sql("select LEFT(InsType,4) InsType ,Treasury,Policy,MTN,SCP,Corporate,CP,CDS,ABS,Other,Date  from [VirtualExchange].[dbo].[BondTypeNetAmt]  where InsType not like '%外资%' and InsType not like '%其他产品类%' and Date>='"+startDate+"' and   Date<='"+endDate+"' order by Date", Engine)
     # 将列汇总为几大类
     Other = sonDf['ABS'] + sonDf['Other']
     CP = sonDf['CP'] + sonDf['SCP']
@@ -65,7 +65,7 @@ def renameIndex(ind):
 
 
 def TrimTermData(startDate,endDate):
-    sonDf = pd.read_sql("select * from [VirtualExchange].[dbo].[BondTermNetAmt]  where Date>='"+startDate+"' and   Date<='"+endDate+"' order by Date", Engine)
+    sonDf = pd.read_sql("select LEFT(InsType,4) InsType,Year1,Year3,Year5,Year7,Year10,Year15,Year20,Year30,YearLong,Date from [VirtualExchange].[dbo].[BondTermNetAmt]  where InsType not like '%外资%' and InsType not like '%其他产品类%'  and  Date>='"+startDate+"' and   Date<='"+endDate+"' order by Date", Engine)
     # 将列汇总为几大类
     Long = sonDf['Year15'] + sonDf['Year20'] + sonDf['Year30'] + sonDf['YearLong']
     Ten = sonDf['Year7'] + sonDf['Year10']
@@ -135,17 +135,79 @@ def QueryTSData(Ins,type):
     if '年' not in type:
         Ins = switchInsname(Ins)
         type = switchType(type)
-        Df = pd.read_sql("select date,"+type+" type from [VirtualExchange].[dbo].[BondTypeNetAmt]   where Instype like '%"+Ins+"%'  and date>='2018-01-01' order by Date",Engine)
+        # Df = pd.read_sql("select date,"+type+" type from [VirtualExchange].[dbo].[BondTypeNetAmt]   where Instype like '%"+Ins+"%'  and date>='2018-01-01' order by Date",Engine)
+        Df = pd.read_sql("select date,"+type+" type from [VirtualExchange].[dbo].[BondTypeNetAmt]   where Instype like '%"+Ins+"%'   order by Date",Engine)
+        Df.type = Df.type.cumsum()
+        Df['tongbi'] = Df.apply(lambda x: CalTB(x, Df), axis=1)
+        Df['tongbi'] = Df['tongbi'].fillna(method='pad')
+        Df['MA5-MA20'] = pd.rolling_mean(Df.type, 5) - pd.rolling_mean(Df.type, 20)
         Df.date = Df.date.astype(str)
         return Df.to_json(orient = 'records')
     else:
         Ins = switchInsname(Ins)
         type = switchTermType(type)
         Df = pd.read_sql(
-            "select date," + type + " type from [VirtualExchange].[dbo].[BondTermNetAmt]   where Instype like '%" + Ins + "%'  and date>='2018-01-01' order by Date",
+            "select date," + type + " type from [VirtualExchange].[dbo].[BondTermNetAmt]   where Instype like '%" + Ins + "%'   order by Date",
             Engine)
+        Df.type = Df.type.cumsum()
+
+        Df['tongbi'] = Df.apply(lambda x:CalTB(x,Df),axis=1)
+        Df['tongbi'] = Df['tongbi'].fillna(method='pad')
+        # pd.rolling_mean(Df['tongbi'], 5).plot()
+        # Dp = Df.set_index('date')
+        # # Dp[Dp.tongbi<100].plot(secondary_y='tongbi')
+        # # Dp1 = Dp[Dp.tongbi < 100]
+        # Dp['tongbiMa'] = pd.rolling_mean(Dp['tongbi'], 5)
+        # Dp.plot(secondary_y='type')
+        Df['MA5-MA20'] = pd.rolling_mean(Df.type,5)-pd.rolling_mean(Df.type,20)
         Df.date = Df.date.astype(str)
         return Df.to_json(orient='records')
+
+def QueryTSData1(Ins,type):
+    if '年' not in type:
+        Ins = switchInsname(Ins)
+        type = switchType(type)
+        Df = pd.read_sql("select date,"+type+" type from [VirtualExchange].[dbo].[BondTypeNetAmt]   where Instype like '%"+Ins+"%'   order by Date",Engine)
+        Df.type = Df.type.cumsum()
+        Df['tongbi'] = Df.apply(lambda x: CalTB(x, Df), axis=1)
+        Df['tongbi'] = Df['tongbi'].fillna(method='pad')
+        Df['MA5-MA20'] = pd.rolling_mean(Df.type, 5) - pd.rolling_mean(Df.type, 20)
+        Df.date = Df.date.astype(str)
+        return Df.to_json(orient = 'records')
+    else:
+        Ins = switchInsname(Ins)
+        CurveDf = CBCurveTs(type)
+        type = switchTermType(type)
+        Df = pd.read_sql(
+            "select date," + type + " type from [VirtualExchange].[dbo].[BondTermNetAmt]   where Instype like '%" + Ins + "%'   order by Date",
+            Engine)
+        Df = Df.set_index('date')
+        DfRst = pd.concat([Df,CurveDf],axis=1)
+        DfRst = DfRst.reset_index()
+        DfRst.columns = ['date', 'type', 'yield']
+        DfRst.type = DfRst.type.cumsum()
+        Df['tongbi'] = Df.apply(lambda x: CalTB(x, Df), axis=1)
+        Df['tongbi'] = Df['tongbi'].fillna(method='pad')
+        Df['MA5-MA20'] = pd.rolling_mean(Df.type, 5) - pd.rolling_mean(Df.type, 20)
+        DfRst.date = DfRst.date.astype(str)
+        return DfRst.to_json(orient='records')
+
+def QueryTSDataNew(Ins,type,term):
+    type = switchTypeNew(type)
+    if term != '10年以上':
+        Df = pd.read_sql(
+            "select date," + type + " type from [VirtualExchange].[dbo].[BondDetailNetAmt]   where Instype like '%" + Ins + "%'  and term like '%"+term+"%'  order by Date",
+            Engine)
+    else:
+        Df = pd.read_sql("select date,sum(" + type + ") type from [VirtualExchange].[dbo].[BondDetailNetAmt]   where Instype like '%" + Ins + "%'  and term in ('10-15年\n（10~15Y）','15-20年\n（15~20Y）','20-30年\n（20~30Y）','30年以上\n（More then 30Y）')  group by Date  order by Date",Engine)
+        # Df = pd.read_sql("select date,sum(TreasuryOld+TreasuryNew) type from [VirtualExchange].[dbo].[BondDetailNetAmt]   where Instype like '%" + Ins + "%'  and term in ('10-15年\n（10~15Y）','15-20年\n（15~20Y）','20-30年\n（20~30Y）','30年以上\n（More then 30Y）')  group by Date  order by Date",Engine)
+    Df.type = Df.type.cumsum()
+    # Df['type1'] = Df.type.cumsum()
+    Df['tongbi'] = Df.apply(lambda x: CalTB(x, Df), axis=1)
+    Df['tongbi'] = Df['tongbi'].fillna(method='pad')
+    Df['MA5-MA20'] = pd.rolling_mean(Df.type, 5) - pd.rolling_mean(Df.type, 20)
+    Df.date = Df.date.astype(str)
+    return Df.to_json(orient='records')
 
 
 def switchInsname(argument):
@@ -174,6 +236,17 @@ def switchType(argument):
     }
     return switcher.get(argument, "nothing")
 
+def switchTypeNew(argument):
+    switcher = {
+        "国债":'TreasuryOld+TreasuryNew',
+        "金融债":'PolicyOld+PolicyNew',
+        "地方债":'LocalGoverment',
+        "存单":'CDS',
+        "ABS":'ABS',
+        # "中票/企业债":'MTN+Corporate',
+    }
+    return switcher.get(argument, "nothing")
+
 def switchTermType(argument):
     switcher = {
         "一年":'Year1',
@@ -183,3 +256,61 @@ def switchTermType(argument):
         "大于十年":'Year15+Year20+Year30+YearLong',
     }
     return switcher.get(argument, "nothing")
+
+# 获取国开收益曲线
+def CBCurveTs(type):
+    if type == '七年十年':
+        CurveDf = pd.read_sql("select * from openquery(WINDNEW,'select t.trade_dt tradeday,t.b_anal_yield yield from CBondCurveCNBD t  where t.b_anal_curvename  =   ''中债国开债收益率曲线'' and t.b_anal_curvetype = 2 and t.b_anal_curveterm = 10 and t.trade_dt>=''20180101'' order by trade_dt')",Engine)
+    else:
+        CurveDf = pd.read_sql(
+            "select * from openquery(WINDNEW,'select t.trade_dt tradeday,t.b_anal_yield yield from CBondCurveCNBD t  where t.b_anal_curvename  =   ''中债国开债收益率曲线'' and t.b_anal_curvetype = 2 and t.b_anal_curveterm = 5 and t.trade_dt>=''20180101'' order by trade_dt')",
+            Engine)
+    CurveDf.TRADEDAY = pd.to_datetime(CurveDf.TRADEDAY)
+    CurveDf = CurveDf.set_index('TRADEDAY')
+    return CurveDf
+
+
+# 新版数据
+def NewData(startDate,endDate):
+    Df = pd.read_sql("select *  from [VirtualExchange].[dbo].[BondDetailNetAmt]  where  Date>='"+startDate+"' and   Date<='"+endDate+"' order by Date", Engine)
+    Df = Df.replace('\n.*', '', regex=True)
+    Df = Df[Df.Term!='合计']
+    Df = Df.ix[:,['InsType', 'Term', 'TreasuryNew', 'TreasuryOld', 'PolicyNew','PolicyOld', 'MTN', 'CP', 'Corporate', 'LocalGoverment', 'CDS', 'ABS','Other','Date']]
+    Df.Term = Df.Term.replace([ '10-15年', '15-20年','20-30年', '30年以上'],'10年以上')
+    GroupDf = Df.groupby(['InsType', 'Term']).sum().reset_index()
+    GroupDf['Treasury'] = GroupDf['TreasuryNew'] + GroupDf['TreasuryOld']
+    GroupDf['Policy'] = GroupDf['PolicyNew'] + GroupDf['PolicyOld']
+    GroupDf['CPMTNCorporate'] = GroupDf['MTN'] + GroupDf['CP'] + GroupDf['Corporate']
+    GroupDf = GroupDf.ix[:, ['InsType', 'Term','Treasury', 'Policy','LocalGoverment', 'CDS','CPMTNCorporate', 'ABS']]
+    CDS = GroupDf.ix[:,['InsType','CDS']].groupby('InsType').sum().reset_index()
+    ABS = GroupDf.ix[:,['InsType','ABS']].groupby('InsType').sum().reset_index()
+    MTN = GroupDf.ix[:,['InsType','Term','CPMTNCorporate']]
+    MTN.Term = MTN.Term.replace(['10年以上','5-7年', '7-10年'],'5年以上')
+    MTN = MTN.groupby(['InsType','Term']).sum().reset_index()
+    return json.dumps({'a':GroupDf.to_dict(orient='records'),'b':CDS.to_dict(orient='records'),'c':ABS.to_dict(orient='records'),'d':MTN.to_dict(orient='records')})
+
+
+# 计算同比
+def CalTB(x,Df):
+    rst = np.nan
+    for i in range(-365,-376,-1):
+        base = Df[Df.date == x.date + datetime.timedelta(-365)].type
+        if base.values.__len__()==1:
+            if base.values[0]!=0:
+                rst = x.type-base.values[0]
+                rst = float('%.2f' % rst)
+                break
+    return rst
+
+
+
+# Df = pd.read_excel('abc.xlsx')
+# writer = pd.ExcelWriter('output.xlsx')
+# endDate = '2019-01-01'
+# for bondname in Df.名称:
+#     print(bondname)
+#     rst = pd.read_sql(
+#         "SELECT * FROM openquery(TEST,'select  DEALBONDNAME,DEALBONDCODE, DEALCLEANPRICE, DEALYIELD, DEALTOTALFACEVALUE/10000 DEALTOTALFACEVALUE,TRADEMETHOD, TRANSACTTIME from marketanalysis.CMDSCBMDEALT where to_char(dealdate, ''yyyy-mm-dd'') >= ''" + endDate + "'' and   DEALBONDNAME like ''%" + bondname + "%''  order by TRANSACTTIME ' )",
+#         Engine)
+#     rst.to_excel(writer,bondname)
+# writer.save()

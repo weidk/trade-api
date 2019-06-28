@@ -71,6 +71,7 @@ def ReadNewbondFromMongo(start,end):
     for lt in list_cursor:
         lc.append(lt['data'])
     NewBondDf = pd.DataFrame(lc)
+    NewBondDf = NewBondDf.drop(NewBondDf[NewBondDf.rate == ''].index, axis=0)
     NewBondDf.columns = ['name','rank1', 'rate', 'maturity']
     NewBondDf.rate = NewBondDf.rate.astype(float)
     # NewBondDf.maturity = NewBondDf.maturity.str.split('+').str.get(0)
@@ -112,3 +113,22 @@ def ReadNewbondFromMongo(start,end):
     except:
         pass
     return NewBondDf
+
+# 资质指数
+def QualificationIndex(start,end):
+    Df = pd.read_sql("select updatetime td_date,qualification  from QualificationIndex where updatetime>='"+start+"' and updatetime<='"+end+"' order by updatetime",EngineIS)
+    Df.td_date = Df.td_date.astype('str')
+    return Df.to_json(orient="records")
+
+# 情绪指数
+def EmotionIndex(start,end):
+    Df = pd.read_sql("select updatetime td_date,emotion,AAA9MYield  from EmotionIndex where updatetime>='"+start+"' and updatetime<='"+end+"'   and  emotion>0 order by updatetime",EngineIS)
+    Df.td_date = Df.td_date.astype('str')
+    Df.AAA9MYield = Df.AAA9MYield*(-1)
+    Df.rename(columns={'emotion': '情绪指数','AAA9MYield': '中债收益率曲线_AAA_9M'}, inplace=True)
+    return Df.to_json(orient="records")
+
+# 异常倍数
+def AbnormalNumber(start,end):
+    Df = pd.read_sql("select * from openquery(IBOND,'select name,fullmultiple from ibond.view_dh  where category in (''超短融'',''短期融资券'',''中期票据'')and issueday <= ''"+end+"'' and paymentday >=''"+start+"''  and fullmultiple>4  ')",EngineIS)
+    return Df.to_json(orient="records")

@@ -12,6 +12,65 @@ def bondLendBag(code):
     restDf['date'] = restDf['date'].astype(str)
     return restDf.to_json(orient="records")
 
+def bondLendBagGK():
+    codes = ['180205','180210','190205','190210']
+    # codes = ['170205','170210','180205','180210','190205']
+    tempDf0 = GetCodeDf(codes[0])
+    tempDf1 = GetCodeDf(codes[1])
+    tempDf2 = GetCodeDf(codes[2])
+    tempDf3 = GetCodeDf(codes[3])
+    # tempDf4 = GetCodeDf(codes[4])
+    D = pd.concat([tempDf0.set_index('date'),tempDf1.set_index('date'),tempDf2.set_index('date'),tempDf3.set_index('date')],axis=1)
+    # D = pd.concat([tempDf0.set_index('date'),tempDf1.set_index('date'),tempDf2.set_index('date'),tempDf3.set_index('date'),tempDf4.set_index('date')],axis=1)
+    D.columns = ['amt0', 'code0', 'amt1', 'code1', 'amt2', 'code2', 'amt3', 'code3']
+    # D.columns = ['amt0', 'code0', 'amt1', 'code1', 'amt2', 'code2', 'amt3', 'code3', 'amt4', 'code4']
+    D = D.fillna(method='pad')
+    D = D.reset_index()
+
+    D0 = D.ix[:,['index','amt0','code0']]
+    D0.columns=['date','amt','code']
+    D1 = D.ix[:, ['index', 'amt1', 'code1']]
+    D1.columns = ['date', 'amt', 'code']
+    D2 = D.ix[:, ['index', 'amt2', 'code2']]
+    D2.columns = ['date', 'amt', 'code']
+
+    D3 = D.ix[:, ['index', 'amt3', 'code3']]
+    D3.columns = ['date', 'amt', 'code']
+    # D4 = D.ix[:, ['index', 'amt4', 'code4']]
+    # D4.columns = ['date', 'amt', 'code']
+
+    CodeDf = pd.DataFrame()
+    CodeDf = CodeDf.append(D0, ignore_index=True)
+    CodeDf = CodeDf.append(D1, ignore_index=True)
+    CodeDf = CodeDf.append(D2, ignore_index=True)
+    CodeDf = CodeDf.append(D3, ignore_index=True)
+    # CodeDf = CodeDf.append(D4, ignore_index=True)
+    # for code in codes:
+    #     tempDf = GetCodeDf(code)
+    #     CodeDf = CodeDf.append(tempDf,ignore_index=True)
+    grouped = CodeDf.groupby('date')
+    groupedDf = pd.DataFrame()
+    groupedDf['date'] = grouped['date'].first()
+    groupedDf['amt'] = grouped['amt'].sum()
+    groupedDf['code'] = '合计'
+    CodeDf = CodeDf.append(groupedDf, ignore_index=True)
+    CodeDf = CodeDf.sort('date')
+    return CodeDf.to_json(orient="records")
+
+def GetCodeDf(code):
+    startDay = "2015-01-01"
+    endDay = dh.today2str()
+    rawDf = importDataFromSql(code, Engine)
+    # 计算新增、待偿还和余额
+    plusDf, paybackDf, restDf = calDeatailAmt(rawDf, code)
+    restDf = restDf.reset_index(['日期'])
+    restDf.columns = ['date', 'amt']
+    restDf['date'] = restDf['date'].astype(str)
+    restDf['code'] = code
+    return restDf
+
+
+
 def bondLendToExcel(code):
     startDay = "2015-01-01"
     endDay = dh.today2str()
@@ -31,7 +90,7 @@ def importData(fileName):
 
 # 从数据库读取数据
 def importDataFromSql(code,engine):
-    rawDf = pd.read_sql("SELECT * FROM openquery(TEST,'select tradedate 日期,underlyingsymbol 简称, underlyingsecurityid 代码,underlyingqty/100000000 券面总额,securityid 借贷期限 from marketanalysis.CMDSSLMDEALT where underlyingsecurityid = ''"+code+"'' order by tradedate' )",engine)
+    rawDf = pd.read_sql("SELECT * FROM openquery(TEST,'select tradedate 日期,underlyingsymbol 简称, underlyingsecurityid 代码,underlyingqty/100000000 券面总额,securityid 借贷期限 from marketanalysis.CMDSSLMDEALT  where underlyingsecurityid = ''"+code+"'' order by tradedate' )",engine)
     rawDf['日期'] = rawDf['日期'].apply(lambda x: x.date())  # 转换日期格式
     rawDf['券面总额'] = rawDf['券面总额'].apply(lambda x: float(x))  # 将字符串券面总额转换为浮点数
     return rawDf
@@ -91,3 +150,6 @@ def getRestAmt(plusDf,paybackDf):
     return restDf.transpose()
 
 
+# for code in ['150205','150210','150218','160210','160213','170210','170215','180205','180210','190205','190210']:
+#     print(code)
+#     bondLendToExcel(code)

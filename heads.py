@@ -1,13 +1,14 @@
-from flask import Flask,jsonify,make_response,request
+from flask import Flask,jsonify,make_response,request,Response
 from flask_socketio import SocketIO,emit
 # gevent
 from gevent import monkey
 from gevent.pywsgi import WSGIServer
 monkey.patch_all()
 # gevent end
-
+import json
 import datetime
 import pandas as pd
+import numpy as np
 from pandas.io.json import json_normalize
 import cx_Oracle
 import sqlalchemy
@@ -18,9 +19,10 @@ import warnings
 warnings.simplefilter(action = "ignore", category = Warning)
 # conn=cx_Oracle.connect('FITRADINGSERVER/FITRADINGSERVER@FITRADE')    #连接数据库
 # Engine = DB.getEngine('172.18.3.43', 'sa', 'tcl+nftx', 'VirtualExchange')
-Engine = DB.getEngine('10.28.7.43', 'sa', 'tcl+nftx', 'VirtualExchange')
+Engine = DB.getEngine('10.28.7.43', 'bond', 'bond', 'VirtualExchange')
 Engine73 = DB.getEngine('192.168.87.73', 'sa', 'tcl+nftx', 'MarketMaker')
-EngineIS = DB.getEngine('10.28.7.43', 'sa', 'tcl+nftx', 'InvestSystem')
+EngineIS = DB.getEngine('10.28.7.43', 'bond', 'bond', 'InvestSystem')
+Engine103 = DB.getEngine('192.168.87.103', 'sa', 'sa123', 'Invest')
 
 import Tools.MongoHelper as MG
 crmDb = MG._connect_mongo("10.28.7.35",39362,"datacenter","datacenter","datacenter")
@@ -44,5 +46,12 @@ import SelfMarketMaker as SM
 import SystemMonitor as SysMoniotor
 import HidenCredit as HC
 import SaleStatistic as Sale
-
 import Initial as Ini
+import CureveMat as CM
+import Todo as TD
+import XBonds as XBond
+import ReviewHistory as Review
+import LongBondIndex as LongBond
+import FuturePosition as FuturePos
+import ReviewStrategy as ReStrategy
+import PredictIndex as Predit
