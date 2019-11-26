@@ -19,6 +19,7 @@ def QueryLatestMat():
 # 读取相对价值数据
 def ReadRelativePrice(startday):
     Df = pd.read_sql("select  * from relativepricecomparison where 日期>'"+startday+"'  order by 日期",EngineIS)
+    Df = Df.fillna(0)
     ReletiveDf = pd.DataFrame()
     for c in Df.columns:
         if c=='日期':

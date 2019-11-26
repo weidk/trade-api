@@ -90,7 +90,7 @@ def importData(fileName):
 
 # 从数据库读取数据
 def importDataFromSql(code,engine):
-    rawDf = pd.read_sql("SELECT * FROM openquery(TEST,'select tradedate 日期,underlyingsymbol 简称, underlyingsecurityid 代码,underlyingqty/100000000 券面总额,securityid 借贷期限 from marketanalysis.CMDSSLMDEALT  where underlyingsecurityid = ''"+code+"'' order by tradedate' )",engine)
+    rawDf = pd.read_sql("SELECT * FROM openquery(TEST,'select tradedate 日期,underlyingsymbol 简称, underlyingsecurityid 代码,underlyingqty/100000000 券面总额,securityid 借贷期限 from marketanalysis.CMDSSLMDEALT  where underlyingsecurityid = ''"+code+"'' order by tradedate' )",Engine)
     rawDf['日期'] = rawDf['日期'].apply(lambda x: x.date())  # 转换日期格式
     rawDf['券面总额'] = rawDf['券面总额'].apply(lambda x: float(x))  # 将字符串券面总额转换为浮点数
     return rawDf
@@ -149,7 +149,7 @@ def getRestAmt(plusDf,paybackDf):
             print(dateIndex)
     return restDf.transpose()
 
-
-# for code in ['150205','150210','150218','160210','160213','170210','170215','180205','180210','190205','190210']:
+#
+# for code in ['190210']:
 #     print(code)
 #     bondLendToExcel(code)

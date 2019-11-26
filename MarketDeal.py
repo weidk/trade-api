@@ -232,6 +232,7 @@ def switchType(argument):
         "金融债":'Policy',
         "短融":'SCP+CP',
         "存单":'CDS',
+        "ABS":'ABS',
         "中票/企业债":'MTN+Corporate',
     }
     return switcher.get(argument, "nothing")
@@ -243,7 +244,7 @@ def switchTypeNew(argument):
         "地方债":'LocalGoverment',
         "存单":'CDS',
         "ABS":'ABS',
-        # "中票/企业债":'MTN+Corporate',
+        "中票/企业债":'MTN+Corporate',
     }
     return switcher.get(argument, "nothing")
 

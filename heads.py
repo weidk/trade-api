@@ -10,15 +10,15 @@ import datetime
 import pandas as pd
 import numpy as np
 from pandas.io.json import json_normalize
-import cx_Oracle
 import sqlalchemy
 from functools import wraps
 import Tools.DateHelper as dh
 import Tools.DataBaseHelper as DB
 import warnings
 warnings.simplefilter(action = "ignore", category = Warning)
+# import cx_Oracle
 # conn=cx_Oracle.connect('FITRADINGSERVER/FITRADINGSERVER@FITRADE')    #连接数据库
-# Engine = DB.getEngine('172.18.3.43', 'sa', 'tcl+nftx', 'VirtualExchange')
+# conn=cx_Oracle.connect('tmpuser/tmpuser@10.28.7.51:1521/orcl')    #连接数据库
 Engine = DB.getEngine('10.28.7.43', 'bond', 'bond', 'VirtualExchange')
 Engine73 = DB.getEngine('192.168.87.73', 'sa', 'tcl+nftx', 'MarketMaker')
 EngineIS = DB.getEngine('10.28.7.43', 'bond', 'bond', 'InvestSystem')
@@ -55,3 +55,7 @@ import LongBondIndex as LongBond
 import FuturePosition as FuturePos
 import ReviewStrategy as ReStrategy
 import PredictIndex as Predit
+import CreditSecondAnalysis as CreditAnalysis
+import BondInCurve as BIC
+import Bloomebergnews as Bloom
+import SpreadMonitor as Spread

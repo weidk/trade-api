@@ -8,7 +8,7 @@ def ReadPosition():
 
 # 查詢所有現券持倉
 def ReadBPMPosition():
-    Position = pd.read_sql("select * from openquery(TEST,'select dealusername,bondname,bondcode,sum(AVAILABLEFACEVALUE) AVAILABLEFACEVALUE,sum(remainingfacevalue+takesupfacevalue) totalfacevalue from smp_dhzq_new.VTY_BONDPOOL_HIS where type_pool = 5  and backupday = (select max(backupday) from smp_dhzq_new.VTY_BONDPOOL_HIS) group by dealusername,bondname,bondcode  ')",Engine)
+    Position = pd.read_sql("select * from openquery(TEST1,'select dealusername,bondname,bondcode,sum(AVAILABLEFACEVALUE) AVAILABLEFACEVALUE,sum(remainingfacevalue+takesupfacevalue) totalfacevalue from smp_dhzq_new.VTY_BONDPOOL_NOW where type_pool = 5   group by dealusername,bondname,bondcode  ')",Engine)
     return Position.to_json(orient="records")
 
 # 查询当日结算持仓

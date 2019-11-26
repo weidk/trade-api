@@ -15,6 +15,11 @@ def allow_cross_domain(fun):
         return rst
     return wrapper_fun
 
+@app.route('/')
+def hello_world():
+   return 'tradeplateform test page'
+
+
 # 新增一条待结算持仓
 @app.route('/api/postposition', methods=['POST'])
 def CreatPosition():
@@ -39,6 +44,117 @@ def DeletePosition():
         PO.deleteData(data)
     except:
         pass
+
+# --------------------------------------------------------------------------------
+# ------------------------ 结算头寸相关 -----------------------------------------
+# 新增一条待结算持仓
+@app.route('/api/postsettle', methods=['POST'])
+def postsettle():
+    try:
+        data = request.json
+        df = json_normalize(data)
+        PO.createNewSettle(df)
+        return 'success'
+    except:
+        pass
+
+# 查询所有结算头寸
+@app.route('/api/settleposition')
+def settleposition():
+    df = PO.getSettle()
+    return df
+
+# 查询所有结算头寸
+@app.route('/api/settlepositionpost',methods=['POST'])
+def settlepositionpost():
+    df = PO.getSettle(date=request.json)
+    return df
+
+
+# 删除结算头寸
+@app.route('/api/deletesettle',methods=['POST'])
+def deletesettle():
+    try:
+        data = request.json
+        PO.deleteSettle(data)
+        return 'success'
+    except:
+        return 'fail'
+
+# 查询明日结算金额
+@app.route('/api/totalsettle')
+def totalsettle():
+    try:
+        df = PO.getTotalAmt()
+        return df
+    except:
+        pass
+
+# 查询头寸密码
+@app.route('/api/positionpsw')
+def positionpsw():
+    try:
+        df = PO.getPSW()
+        return df
+    except:
+        pass
+
+# 查询头寸添加状态
+@app.route('/api/positionstatus')
+def positionstatus():
+    try:
+        df = PO.getAllowStatus()
+        return df
+    except:
+        pass
+
+# 查询明日非现券结算头寸
+@app.route('/api/nonbondinfo')
+def nonbondinfo():
+    try:
+        df = PO.getNonBond()
+        return df
+    except:
+        pass
+
+# 查询净卖空债券
+@app.route('/api/netsellbond')
+def netsellbond():
+    try:
+        df = PO.getNetBond()
+        return df
+    except:
+        pass
+
+# 修改头寸状态
+@app.route('/api/changepositionstatus', methods=['POST'])
+def changepositionstatus():
+    try:
+        data = request.json
+        df = PO.ChangAllowStatus(data['data'])
+        return df
+    except:
+        pass
+
+@app.route('/api/netsellbondpost', methods=['POST'])
+def netsellbondpost():
+    try:
+        df = PO.getNetBond(date=request.json)
+        return df
+    except:
+        pass
+
+@app.route('/api/nonbondinfopost', methods=['POST'])
+def nonbondinfopost():
+    try:
+        df = PO.getNonBond(date=request.json)
+        return df
+    except:
+        pass
+
+
+# --------------------------------------------------------------------------------
+
 
 # --------------------------------------------------------------------------------
 
@@ -598,6 +714,36 @@ def PureBond():
     except:
         pass
 
+# ------------------------   转债转股溢价率  -----------------------------
+@app.route('/api/convpratio', methods=['POST'])
+def convpratio():
+    try:
+        date = request.json
+        rst = LongBond.ConvpRatio(date['start'], date['end'])
+        return rst
+    except:
+        pass
+
+# ------------------------   转债个券历史  -----------------------------
+@app.route('/api/cbhistory', methods=['POST'])
+def cbhistory():
+    try:
+        data = request.json
+        rst = LongBond.ConvpRatioHistory(data['start'], data['end'],data['code'])
+        return rst
+    except:
+        pass
+
+# ------------------------   转债列表  -----------------------------
+@app.route('/api/getcbondlist')
+def getcbondlist():
+    try:
+        rst = LongBond.CBondList()
+        return rst
+    except:
+        pas
+
+
 # ------------------------   期货持仓变动  -----------------------------
 @app.route('/api/futurepositionchange', methods=['POST'])
 def PostFuturePosChange():
@@ -646,6 +792,86 @@ def XBondPredit():
         return rst
     except:
         pass
+
+# 城投按省份统计
+@app.route('/api/cityprovince', methods=['POST'])
+def cityprovince():
+    try:
+        data = request.json
+        rst = CreditAnalysis.CityDealsProvince(data['start'], data['end'])
+        return rst
+    except:
+        pass
+
+# 信用按行业统计
+@app.route('/api/industrydeals', methods=['POST'])
+def industrydeals():
+    try:
+        data = request.json
+        rst = CreditAnalysis.IndustryDealsProvince(data['start'], data['end'])
+        return rst
+    except:
+        pass
+
+# 查询成交明细
+@app.route('/api/creditdealdetail', methods=['POST'])
+def creditdealdetail():
+    try:
+        data = request.json
+        rst = CreditAnalysis.QueryDealsDetail(data['industry'], data['tdday'])
+        return rst
+    except:
+        pass
+
+# 查询换手率
+@app.route('/api/creditturnoverrate', methods=['POST'])
+def creditturnoverrate():
+    try:
+        rst = CreditAnalysis.QueryTurnoverRate(request.json)
+        return rst
+    except:
+        pass
+
+
+# 个券和曲线图
+@app.route('/api/bondincurve', methods=['POST'])
+def bondincurve():
+    try:
+        data = request.json
+        rst = BIC.GetCurve(data['bondtype'])
+        return rst
+    except:
+        pass
+
+@app.route('/api/dealsbonds')
+def dealsbonds():
+    try:
+        df = BIC.GetDeals()
+        return df
+    except:
+        pass
+
+@app.route('/api/bloomenews')
+def bloomenews():
+    try:
+        df = Bloom.GetTodayAllNews()
+        return df
+    except:
+        pass
+
+# ————————————————————————————————————————————————————————————————
+# 利差监控最新成交价
+@app.route('/api/spreadlatestyield', methods=['POST'])
+def spreadlatestyield():
+    try:
+        data = request.json
+        rst = Spread.QueryLatestDealYield(data)
+        return rst
+    except:
+        pass
+
+
+
 
 # *******************************************************************
 # *******************************************************************

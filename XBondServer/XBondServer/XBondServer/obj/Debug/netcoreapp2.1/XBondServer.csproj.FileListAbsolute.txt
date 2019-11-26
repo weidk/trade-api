@@ -1,0 +1,14 @@
+D:\workspace\交易接口\trade-api\XBondServer\XBondServer\XBondServer\bin\Debug\netcoreapp2.1\XBondServer.deps.json
+D:\workspace\交易接口\trade-api\XBondServer\XBondServer\XBondServer\bin\Debug\netcoreapp2.1\XBondServer.runtimeconfig.json
+D:\workspace\交易接口\trade-api\XBondServer\XBondServer\XBondServer\bin\Debug\netcoreapp2.1\XBondServer.runtimeconfig.dev.json
+D:\workspace\交易接口\trade-api\XBondServer\XBondServer\XBondServer\bin\Debug\netcoreapp2.1\XBondServer.dll
+D:\workspace\交易接口\trade-api\XBondServer\XBondServer\XBondServer\bin\Debug\netcoreapp2.1\XBondServer.pdb
+D:\workspace\交易接口\trade-api\XBondServer\XBondServer\XBondServer\obj\Debug\netcoreapp2.1\XBondServer.csprojAssemblyReference.cache
+D:\workspace\交易接口\trade-api\XBondServer\XBondServer\XBondServer\obj\Debug\netcoreapp2.1\XBondServer.csproj.CoreCompileInputs.cache
+D:\workspace\交易接口\trade-api\XBondServer\XBondServer\XBondServer\obj\Debug\netcoreapp2.1\XBondServer.RazorAssemblyInfo.cache
+D:\workspace\交易接口\trade-api\XBondServer\XBondServer\XBondServer\obj\Debug\netcoreapp2.1\XBondServer.RazorAssemblyInfo.cs
+D:\workspace\交易接口\trade-api\XBondServer\XBondServer\XBondServer\obj\Debug\netcoreapp2.1\XBondServer.AssemblyInfoInputs.cache
+D:\workspace\交易接口\trade-api\XBondServer\XBondServer\XBondServer\obj\Debug\netcoreapp2.1\XBondServer.AssemblyInfo.cs
+D:\workspace\交易接口\trade-api\XBondServer\XBondServer\XBondServer\obj\Debug\netcoreapp2.1\XBondServer.RazorTargetAssemblyInfo.cache
+D:\workspace\交易接口\trade-api\XBondServer\XBondServer\XBondServer\obj\Debug\netcoreapp2.1\XBondServer.dll
+D:\workspace\交易接口\trade-api\XBondServer\XBondServer\XBondServer\obj\Debug\netcoreapp2.1\XBondServer.pdb

@@ -5,49 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08832245-c459-452c-a970-8571a03800af" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CureveMat.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/FuturePosition.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LongBondIndex.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PredictIndex.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReviewHistory.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReviewStrategy.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Todo.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/XBonds.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/LichaMat.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketMakerServer/.vs/MarketMakerServer/DesignTimeBuild/.dtbcache" afterPath="$PROJECT_DIR$/MarketMakerServer/.vs/MarketMakerServer/DesignTimeBuild/.dtbcache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketMakerServer/.vs/MarketMakerServer/v15/.suo" afterPath="$PROJECT_DIR$/MarketMakerServer/.vs/MarketMakerServer/v15/.suo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/.vs/RealtimeApi/DesignTimeBuild/.dtbcache" afterPath="$PROJECT_DIR$/RealtimeApi/.vs/RealtimeApi/DesignTimeBuild/.dtbcache" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Bloomebergnews.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BondInCurve.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CreditSecondAnalysis.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpreadMonitor.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/.vs/RealtimeApi/v15/.suo" afterPath="$PROJECT_DIR$/RealtimeApi/.vs/RealtimeApi/v15/.suo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/.vs/RealtimeApi/v15/Server/sqlite3/storage.ide" afterPath="$PROJECT_DIR$/RealtimeApi/.vs/RealtimeApi/v15/Server/sqlite3/storage.ide" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/.vs/RealtimeApi/v15/Server/sqlite3/storage.ide-shm" afterPath="$PROJECT_DIR$/RealtimeApi/.vs/RealtimeApi/v15/Server/sqlite3/storage.ide-shm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/.vs/RealtimeApi/v15/Server/sqlite3/storage.ide-wal" afterPath="$PROJECT_DIR$/RealtimeApi/.vs/RealtimeApi/v15/Server/sqlite3/storage.ide-wal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Debug/netcoreapp2.1/RealtimeApi.dll" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Debug/netcoreapp2.1/RealtimeApi.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Debug/netcoreapp2.1/RealtimeApi.pdb" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Debug/netcoreapp2.1/RealtimeApi.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi.dll" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi.pdb" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi/RealtimeApi.dll" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi/RealtimeApi.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi/RealtimeApi.pdb" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi/RealtimeApi.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Debug/netcoreapp2.1/RealtimeApi.dll" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Debug/netcoreapp2.1/RealtimeApi.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Debug/netcoreapp2.1/RealtimeApi.pdb" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Debug/netcoreapp2.1/RealtimeApi.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/PubTmp/Out/RealtimeApi.dll" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/PubTmp/Out/RealtimeApi.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/PubTmp/Out/RealtimeApi.pdb" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/PubTmp/Out/RealtimeApi.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/RealtimeApi.dll" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/RealtimeApi.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/RealtimeApi.pdb" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/RealtimeApi.pdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/trade-api.iml" afterPath="$PROJECT_DIR$/.idea/trade-api.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CDFunctionsDailyJob.py" afterPath="$PROJECT_DIR$/CDFunctionsDailyJob.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Global.py" afterPath="$PROJECT_DIR$/Global.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CureveMat.py" afterPath="$PROJECT_DIR$/CureveMat.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LongBondIndex.py" afterPath="$PROJECT_DIR$/LongBondIndex.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketDeal.py" afterPath="$PROJECT_DIR$/MarketDeal.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketScore.py" afterPath="$PROJECT_DIR$/MarketScore.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NewBondRate.py" afterPath="$PROJECT_DIR$/NewBondRate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/Funcs/MonitorBp.cs" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/Funcs/MonitorBp.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/RealtimeApi.csproj.user" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/RealtimeApi.csproj.user" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/appsettings.json" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/appsettings.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi/appsettings.json" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi/appsettings.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportChart.py" afterPath="$PROJECT_DIR$/ReportChart.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bondLend.py" afterPath="$PROJECT_DIR$/bondLend.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/heads.py" afterPath="$PROJECT_DIR$/heads.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobs/WriteDailyReport/.idea/workspace.xml" afterPath="$PROJECT_DIR$/jobs/WriteDailyReport/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobs/WriteDailyReport/WriteDailyReport.py" afterPath="$PROJECT_DIR$/jobs/WriteDailyReport/WriteDailyReport.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobs/WriteDailyReport/heads.py" afterPath="$PROJECT_DIR$/jobs/WriteDailyReport/heads.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/position.py" afterPath="$PROJECT_DIR$/position.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tradeApi.py" afterPath="$PROJECT_DIR$/tradeApi.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,10 +32,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/trade_api$MarketScore.coverage" NAME="MarketScore Coverage Results" MODIFIED="1527064344486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/trade_api$MarketDeal.coverage" NAME="MarketDeal Coverage Results" MODIFIED="1534910491118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/trade_api$tradeApi.coverage" NAME="tradeApi Coverage Results" MODIFIED="1561602027953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/trade_api$trade_api.coverage" NAME="trade-api Coverage Results" MODIFIED="1520217953352" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/trade_api$tradeApi.coverage" NAME="tradeApi Coverage Results" MODIFIED="1574750118625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -78,39 +49,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CureveMat.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CureveMat.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="70" column="48" lean-forward="false" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
-              <folding>
-                <element signature="e#816#3208#0" expanded="false" />
-                <element signature="e#986#1216#0" expanded="false" />
-                <marker date="1561599788563" expanded="true" signature="77:108" ph="select name,... CDFMatView" />
-                <marker date="1561599788563" expanded="true" signature="834:909" ph="select * fro... relativepricecomparison" />
-                <marker date="1561599788563" expanded="true" signature="3284:3299" ph="select * fro... ##" />
-                <marker date="1561599788563" expanded="true" signature="3284:3377" ph="select * fro... relativepricecomparison" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="tradeApi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tradeApi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13520">
-              <caret line="521" column="8" lean-forward="false" selection-start-line="521" selection-start-column="8" selection-end-line="521" selection-end-column="8" />
+            <state relative-caret-position="4256">
+              <caret line="134" column="17" lean-forward="false" selection-start-line="134" selection-start-column="17" selection-end-line="134" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="heads.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/heads.py">
+      <file leaf-file-name="position.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/position.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="24" column="67" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="24" selection-end-column="67" />
-              <folding />
+            <state relative-caret-position="348">
+              <caret line="80" column="21" lean-forward="false" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+              <folding>
+                <marker date="1574681330454" expanded="true" signature="74:174" ph="SELECT * FRO... " />
+                <marker date="1574681330454" expanded="true" signature="605:663" ph="delete from " />
+                <marker date="1574681330454" expanded="true" signature="1325:1520" ph="SELECT id,tr... " />
+                <marker date="1574681330454" expanded="true" signature="1629:1694" ph="update settl... " />
+                <marker date="1574681330454" expanded="true" signature="1803:1939" ph="SELECT sum(n... " />
+                <marker date="1574681330454" expanded="true" signature="1803:1943" ph="SELECT sum(n... " />
+                <marker date="1574681330454" expanded="true" signature="1803:1955" ph="SELECT sum(n... " />
+                <marker date="1574681330454" expanded="true" signature="1803:1964" ph="SELECT sum(n... " />
+                <marker date="1574681330454" expanded="true" signature="2184:2340" ph="SELECT sum(n... " />
+                <marker date="1574681330454" expanded="true" signature="2688:2893" ph="SELECT bondc... " />
+                <marker date="1574681330454" expanded="true" signature="3512:3569" ph="SELECT bondc... " />
+                <marker date="1574681330454" expanded="true" signature="3668:3728" ph="SELECT [pass... " />
+                <marker date="1574681330454" expanded="true" signature="3847:3884" ph="UPDATE posit... " />
+                <marker date="1574681330454" expanded="true" signature="3847:3896" ph="UPDATE posit... " />
+                <marker date="1574681330454" expanded="true" signature="3954:4014" ph="SELECT [NotA... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -128,36 +98,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Review</find>
-      <find>bpm</find>
-      <find>cum</find>
-      <find>counter</find>
-      <find>MD</find>
-      <find>cross_origin</find>
-      <find>marketscores</find>
-      <find>tongbi</find>
-      <find>f</find>
-      <find>Dump</find>
-      <find>Dum</find>
-      <find>Du</find>
-      <find>D</find>
-      <find>j</find>
-      <find>js</find>
-      <find>json</find>
-      <find>d</find>
-      <find>du</find>
-      <find>dum</find>
-      <find>dump</find>
-      <find>CM</find>
-      <find>dumps</find>
-      <find>review</find>
-      <find>secondmar</find>
-      <find>marketdealtsnew</find>
-      <find>marketdealts</find>
+      <find>purebondindex</find>
       <find>marketdealnew</find>
-      <find>json.dumps(</find>
-      <find>F</find>
-      <find>ReadRel</find>
+      <find>banksgeo</find>
+      <find>comsum</find>
+      <find>comsu</find>
+      <find>coms</find>
+      <find>com</find>
+      <find>consum</find>
+      <find>consu</find>
+      <find>cons</find>
+      <find>con</find>
+      <find>co</find>
+      <find>c</find>
+      <find>s</find>
+      <find>su</find>
+      <find>sum</find>
+      <find>createNewPositon</find>
+      <find>QueryDealsDetail</find>
+      <find>settledownpositon</find>
+      <find>creditturnoverrate</find>
+      <find>reletivecurve</find>
+      <find>CSTPCBMMARKETMAKINGQUOTE</find>
+      <find>LBIndex</find>
+      <find>转股</find>
+      <find>report</find>
+      <find>ConvpRatio</find>
+      <find>postsettle</find>
+      <find>netsellbondpost</find>
+      <find>getTotalAmt</find>
+      <find>changepositionstatus</find>
     </findStrings>
     <replaceStrings>
       <replace>position</replace>
@@ -169,12 +139,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/trade-api.py" />
         <option value="$PROJECT_DIR$/TradeApi.py" />
         <option value="$PROJECT_DIR$/apis.py" />
         <option value="$PROJECT_DIR$/QuoteStatus.js" />
         <option value="$PROJECT_DIR$/quoteStatus.py" />
-        <option value="$PROJECT_DIR$/position.py" />
         <option value="$PROJECT_DIR$/../../python/BondDailyAmt/main.py" />
         <option value="$PROJECT_DIR$/../../python/导出成交单/Funcs.py" />
         <option value="$PROJECT_DIR$/jobs/SPositionjob.py" />
@@ -195,27 +163,33 @@
         <option value="$PROJECT_DIR$/jobs/MarketScoreJob.py" />
         <option value="$PROJECT_DIR$/G.py" />
         <option value="$PROJECT_DIR$/Initial.py" />
-        <option value="$PROJECT_DIR$/SaleStatistic.py" />
         <option value="$USER_HOME$/Desktop/导出每日中介成交/Funcs.py" />
         <option value="$PROJECT_DIR$/Todo.py" />
         <option value="$PROJECT_DIR$/XBond.py" />
         <option value="$PROJECT_DIR$/XBonds.py" />
         <option value="$PROJECT_DIR$/Global.py" />
         <option value="$PROJECT_DIR$/ReviewHistory.py" />
-        <option value="$PROJECT_DIR$/ReportChart.py" />
-        <option value="$PROJECT_DIR$/LongBondIndex.py" />
         <option value="$PROJECT_DIR$/NewBondRate.py" />
         <option value="$PROJECT_DIR$/FuturePosition.py" />
         <option value="$PROJECT_DIR$/Review.py" />
         <option value="$PROJECT_DIR$/CDFunctionsDailyJob.py" />
         <option value="$PROJECT_DIR$/MarketScore.py" />
         <option value="$PROJECT_DIR$/PredictIndex.py" />
-        <option value="$PROJECT_DIR$/heads.py" />
         <option value="$PROJECT_DIR$/ReviewStrategy.py" />
+        <option value="$PROJECT_DIR$/ReportChart.py" />
         <option value="$PROJECT_DIR$/MarketDeal.py" />
+        <option value="$PROJECT_DIR$/SaleStatistic.py" />
+        <option value="$PROJECT_DIR$/Tools/DataBaseHelper.py" />
+        <option value="$PROJECT_DIR$/BondInCurve.py" />
+        <option value="$PROJECT_DIR$/Bloomebergnews.py" />
         <option value="$PROJECT_DIR$/bondLend.py" />
-        <option value="$PROJECT_DIR$/tradeApi.py" />
+        <option value="$PROJECT_DIR$/heads.py" />
+        <option value="$PROJECT_DIR$/SpreadMonitor.py" />
+        <option value="$PROJECT_DIR$/CreditSecondAnalysis.py" />
         <option value="$PROJECT_DIR$/CureveMat.py" />
+        <option value="$PROJECT_DIR$/LongBondIndex.py" />
+        <option value="$PROJECT_DIR$/tradeApi.py" />
+        <option value="$PROJECT_DIR$/position.py" />
       </list>
     </option>
   </component>
@@ -226,10 +200,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1608" />
+    <option name="x" value="-1928" />
     <option name="y" value="-8" />
-    <option name="width" value="1616" />
-    <option name="height" value="916" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -247,6 +221,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -261,21 +237,21 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Python" />
-    <property name="nodejs_interpreter_path" value="D:/Program Files/nodejs/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../trade-view" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="" />
-    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="" />
     <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path" value="D:/Program Files/nodejs/node" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyDebuggerOptionsProvider">
     <option name="mySupportGeventDebugging" value="true" />
@@ -298,7 +274,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.tradeApi">
-    <configuration default="false" name="tradeApi" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="MarketDeal" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -311,7 +287,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="trade-api" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tradeApi.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MarketDeal.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -336,7 +312,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="MarketDeal" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="tradeApi" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -349,7 +325,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="trade-api" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MarketDeal.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tradeApi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -525,15 +501,13 @@
     </configuration>
     <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.trade-api" />
-      <item index="1" class="java.lang.String" itemvalue="Python.tradeApi" />
+      <item index="1" class="java.lang.String" itemvalue="Python.MarketDeal" />
       <item index="2" class="java.lang.String" itemvalue="Python.MarketScore" />
-      <item index="3" class="java.lang.String" itemvalue="Python.MarketDeal" />
+      <item index="3" class="java.lang.String" itemvalue="Python.tradeApi" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="1">
         <item index="0" class="java.lang.String" itemvalue="Python.tradeApi" />
-        <item index="1" class="java.lang.String" itemvalue="Python.MarketDeal" />
-        <item index="2" class="java.lang.String" itemvalue="Python.MarketScore" />
       </list>
     </recent_temporary>
   </component>
@@ -543,6 +517,9 @@
   <component name="StructureViewFactory">
     <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="08832245-c459-452c-a970-8571a03800af" name="Default" comment="" />
@@ -550,8 +527,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519969499392</updated>
+      <workItem from="1572921206905" duration="36000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="36000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -563,50 +544,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1608" y="-8" width="1616" height="916" extended-state="6" />
+    <frame x="-1928" y="-8" width="1936" height="1096" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23200513" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31632653" sideWeight="0.5025707" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2203898" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30739796" sideWeight="0.4974293" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31760204" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24966533" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908162" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19509594" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30769232" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39501038" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3137755" sideWeight="0.4974293" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="false" weight="0.5044987" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="1378" height="900" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35021323" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908162" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38392857" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31760204" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908162" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22557841" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24966533" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35714287" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.457162" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -616,62 +576,33 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints-dialog>
-        <breakpoints-dialog />
-      </breakpoints-dialog>
-      <default-breakpoints>
-        <breakpoint type="python-exception">
-          <properties notifyOnTerminate="true" exception="BaseException">
-            <option name="notifyOnTerminate" value="true" />
-          </properties>
-        </breakpoint>
-      </default-breakpoints>
-      <option name="time" value="157" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="PDf" />
-        <watch expression="NewBondDf" />
-        <watch expression="WinDf" />
-        <watch expression="ReletiveDf" />
+        <watch expression="DfNew" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/导出每日中介成交/head.py" />
-    <entry file="file://$USER_HOME$/Desktop/导出每日中介成交/Funcs.py" />
-    <entry file="file://$PROJECT_DIR$/Todo.py">
+    <entry file="file://$PROJECT_DIR$/tradeApi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="91" lean-forward="false" selection-start-line="10" selection-start-column="91" selection-end-line="10" selection-end-column="91" />
+        <state relative-caret-position="15262">
+          <caret line="588" column="11" lean-forward="false" selection-start-line="588" selection-start-column="11" selection-end-line="588" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../python/test/t1.py">
+    <entry file="file://$PROJECT_DIR$/heads.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        <state relative-caret-position="520">
+          <caret line="24" column="67" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="24" selection-end-column="67" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../python/喇叭喊old/main.py">
+    <entry file="file://$PROJECT_DIR$/CureveMat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/curvemat/funcs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="43" lean-forward="false" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../python/生成操作指令书 - irs/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        <state relative-caret-position="312">
+          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -696,13 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../python/Report/Funds.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jobs/SPositionjob.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
@@ -717,13 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/curvemat/heads.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../python/蜘蛛网策略/head.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
@@ -731,24 +648,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Program Files/Anaconda3/Lib/site-packages/pandas/stats/moments.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="478" column="0" lean-forward="false" selection-start-line="478" selection-start-column="0" selection-end-line="478" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Program Files/Anaconda3/Lib/site-packages/pandas/stats/moments.py" />
     <entry file="file://$PROJECT_DIR$/AddNewBondHq.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-741">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LongBondIndex.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="62" />
         </state>
       </provider>
     </entry>
@@ -759,31 +663,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SaleStatistic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="69" column="4" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../python/回测/Func.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-156">
           <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../python/Macro/Funcs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FuturePosition.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -801,27 +684,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HidenCredit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="98" column="16" lean-forward="false" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tools/DateHelper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-952285868/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="4130" column="8" lean-forward="false" selection-start-line="4130" selection-start-column="8" selection-end-line="4130" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-952285868/builtins.py" />
     <entry file="file://$PROJECT_DIR$/../../python/Macro/PMI.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -850,13 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/position.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PredictIndex.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -871,38 +727,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MarketScore.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-626">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#673#810#0" expanded="false" />
-            <marker date="1555397541557" expanded="true" signature="72:97" ph="select * fro... MarketScore" />
-            <marker date="1555397541557" expanded="true" signature="257:625" ph="select * fro... openquery" />
-            <marker date="1555397541557" expanded="true" signature="1407:1892" ph="select * fro... openquery" />
-            <marker date="1555397541557" expanded="true" signature="1407:1901" ph="select * fro... openquery" />
-            <marker date="1555397541557" expanded="true" signature="2079:2368" ph="select * fro... openquery" />
-            <marker date="1555397541557" expanded="true" signature="2456:2751" ph="select * fro... openquery" />
-            <marker date="1555397541557" expanded="true" signature="2810:3001" ph="select * fro... openquery" />
-            <marker date="1555397541557" expanded="true" signature="2810:3038" ph="select * fro... openquery" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-952285868/cx_Oracle/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-952285868/cx_Oracle/connect.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-952285868/cx_Oracle/__init__.py" />
+    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-952285868/cx_Oracle/connect.py" />
     <entry file="file://$PROJECT_DIR$/LichaMat.py" />
     <entry file="file://$PROJECT_DIR$/ReviewStrategy.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -918,24 +744,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/XBonds.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bondLend.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3952">
-          <caret line="153" column="17" lean-forward="false" selection-start-line="153" selection-start-column="17" selection-end-line="153" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -946,54 +758,186 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReportChart.py">
+    <entry file="file://$PROJECT_DIR$/XBonds.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CDFunctionsDailyJob.py">
+    <entry file="file://$PROJECT_DIR$/SaleStatistic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="45" />
+        <state relative-caret-position="374">
+          <caret line="167" column="47" lean-forward="false" selection-start-line="167" selection-start-column="47" selection-end-line="167" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FuturePosition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MarketScore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="12" column="394" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="394" />
+          <folding>
+            <element signature="e#673#810#0" expanded="false" />
+            <marker date="1555397541557" expanded="true" signature="72:97" ph="select * fro... MarketScore" />
+            <marker date="1555397541557" expanded="true" signature="257:625" ph="select * fro... openquery" />
+            <marker date="1555397541557" expanded="true" signature="1407:1892" ph="select * fro... openquery" />
+            <marker date="1555397541557" expanded="true" signature="1407:1901" ph="select * fro... openquery" />
+            <marker date="1555397541557" expanded="true" signature="2079:2368" ph="select * fro... openquery" />
+            <marker date="1555397541557" expanded="true" signature="2456:2751" ph="select * fro... openquery" />
+            <marker date="1555397541557" expanded="true" signature="2810:3001" ph="select * fro... openquery" />
+            <marker date="1555397541557" expanded="true" signature="2810:3038" ph="select * fro... openquery" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MarketDeal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7514">
-          <caret line="289" column="11" lean-forward="false" selection-start-line="289" selection-start-column="11" selection-end-line="289" selection-end-column="11" />
+        <state relative-caret-position="2857">
+          <caret line="290" column="164" lean-forward="true" selection-start-line="290" selection-start-column="11" selection-end-line="290" selection-end-column="164" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CDFunctionsDailyJob.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BondInCurve.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="27" column="39" lean-forward="true" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tools/DateHelper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bloomebergnews.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tools/DataBaseHelper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HidenCredit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2548">
+          <caret line="98" column="16" lean-forward="false" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bondLend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpreadMonitor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Anaconda3/Lib/site-packages/pandas/io/json.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1988">
+          <caret line="638" column="4" lean-forward="false" selection-start-line="638" selection-start-column="4" selection-end-line="638" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReportChart.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="38" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Program Files/Anaconda3/Lib/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="1624" column="0" lean-forward="false" selection-start-line="1624" selection-start-column="0" selection-end-line="1624" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CureveMat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CreditSecondAnalysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="23" column="95" lean-forward="false" selection-start-line="23" selection-start-column="95" selection-end-line="23" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LongBondIndex.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/heads.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="24" column="67" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="24" selection-end-column="67" />
+        <state relative-caret-position="96">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="24" selection-end-column="67" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tradeApi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13520">
-          <caret line="521" column="8" lean-forward="false" selection-start-line="521" selection-start-column="8" selection-end-line="521" selection-end-column="8" />
+        <state relative-caret-position="4256">
+          <caret line="134" column="17" lean-forward="false" selection-start-line="134" selection-start-column="17" selection-end-line="134" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CureveMat.py">
+    <entry file="file://$PROJECT_DIR$/position.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="70" column="48" lean-forward="false" selection-start-line="70" selection-start-column="48" selection-end-line="70" selection-end-column="48" />
+        <state relative-caret-position="348">
+          <caret line="80" column="21" lean-forward="false" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
           <folding>
-            <element signature="e#816#3208#0" expanded="false" />
-            <element signature="e#986#1216#0" expanded="false" />
-            <marker date="1561599788563" expanded="true" signature="77:108" ph="select name,... CDFMatView" />
-            <marker date="1561599788563" expanded="true" signature="834:909" ph="select * fro... relativepricecomparison" />
-            <marker date="1561599788563" expanded="true" signature="3284:3299" ph="select * fro... ##" />
-            <marker date="1561599788563" expanded="true" signature="3284:3377" ph="select * fro... relativepricecomparison" />
+            <marker date="1574681330454" expanded="true" signature="74:174" ph="SELECT * FRO... " />
+            <marker date="1574681330454" expanded="true" signature="605:663" ph="delete from " />
+            <marker date="1574681330454" expanded="true" signature="1325:1520" ph="SELECT id,tr... " />
+            <marker date="1574681330454" expanded="true" signature="1629:1694" ph="update settl... " />
+            <marker date="1574681330454" expanded="true" signature="1803:1939" ph="SELECT sum(n... " />
+            <marker date="1574681330454" expanded="true" signature="1803:1943" ph="SELECT sum(n... " />
+            <marker date="1574681330454" expanded="true" signature="1803:1955" ph="SELECT sum(n... " />
+            <marker date="1574681330454" expanded="true" signature="1803:1964" ph="SELECT sum(n... " />
+            <marker date="1574681330454" expanded="true" signature="2184:2340" ph="SELECT sum(n... " />
+            <marker date="1574681330454" expanded="true" signature="2688:2893" ph="SELECT bondc... " />
+            <marker date="1574681330454" expanded="true" signature="3512:3569" ph="SELECT bondc... " />
+            <marker date="1574681330454" expanded="true" signature="3668:3728" ph="SELECT [pass... " />
+            <marker date="1574681330454" expanded="true" signature="3847:3884" ph="UPDATE posit... " />
+            <marker date="1574681330454" expanded="true" signature="3847:3896" ph="UPDATE posit... " />
+            <marker date="1574681330454" expanded="true" signature="3954:4014" ph="SELECT [NotA... " />
           </folding>
         </state>
       </provider>

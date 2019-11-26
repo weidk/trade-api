@@ -2,7 +2,7 @@ from heads import *
 
 # 获取收益数据
 def ReadProfitDF(endDate):
-    DF = pd.read_sql("select tradedate,fundacc,round((totalprofit_f+totalprofit_s)/10000,2) profit from marketmaker.dbo.fundanalysis where tradedate>='2018-01-01'  and tradedate<='"+endDate+"' order by tradedate",Engine73)
+    DF = pd.read_sql("select tradedate,fundacc,round((totalprofit_f+totalprofit_s)/10000,2) profit from marketmaker.dbo.fundanalysis where tradedate>='2019-01-01'  and tradedate<='"+endDate+"' order by tradedate",Engine73)
     DF = DF[DF.fundacc!='103']
     def changeFundacc(fund):
         switch ={
