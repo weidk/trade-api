@@ -4,26 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/MarketScore.py" line="1" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08832245-c459-452c-a970-8571a03800af" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Bloomebergnews.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BondInCurve.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CreditSecondAnalysis.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SpreadMonitor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/.vs/RealtimeApi/v15/.suo" afterPath="$PROJECT_DIR$/RealtimeApi/.vs/RealtimeApi/v15/.suo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/.vs/RealtimeApi/v15/Server/sqlite3/storage.ide-shm" afterPath="$PROJECT_DIR$/RealtimeApi/.vs/RealtimeApi/v15/Server/sqlite3/storage.ide-shm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/trade-api.iml" afterPath="$PROJECT_DIR$/.idea/trade-api.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CDFunctionsDailyJob.py" afterPath="$PROJECT_DIR$/CDFunctionsDailyJob.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CureveMat.py" afterPath="$PROJECT_DIR$/CureveMat.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LongBondIndex.py" afterPath="$PROJECT_DIR$/LongBondIndex.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketDeal.py" afterPath="$PROJECT_DIR$/MarketDeal.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi/appsettings.json" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi/appsettings.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportChart.py" afterPath="$PROJECT_DIR$/ReportChart.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bondLend.py" afterPath="$PROJECT_DIR$/bondLend.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/heads.py" afterPath="$PROJECT_DIR$/heads.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/position.py" afterPath="$PROJECT_DIR$/position.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tradeApi.py" afterPath="$PROJECT_DIR$/tradeApi.py" />
-    </list>
+    <list default="true" id="08832245-c459-452c-a970-8571a03800af" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
