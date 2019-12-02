@@ -25,6 +25,7 @@ def deleteData(data):
 # 新建一条结算头寸
 def createNewSettle(df):
     # df['netamt'] = df.sellamt - df.buyamt
+    df.drop(['key'], axis=1, inplace=True)
     df.to_sql('settleposition', EngineIS, if_exists='append', index=False, index_label=df.columns,dtype={
         'trader': sqlalchemy.String,
         'bondcode': sqlalchemy.String,

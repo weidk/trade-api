@@ -4,7 +4,12 @@
     <bookmark url="file://$PROJECT_DIR$/MarketScore.py" line="1" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08832245-c459-452c-a970-8571a03800af" name="Default" comment="" />
+    <list default="true" id="08832245-c459-452c-a970-8571a03800af" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CreditSecondAnalysis.py" afterPath="$PROJECT_DIR$/CreditSecondAnalysis.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/position.py" afterPath="$PROJECT_DIR$/position.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tradeApi.py" afterPath="$PROJECT_DIR$/tradeApi.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/trade_api$tradeApi.coverage" NAME="tradeApi Coverage Results" MODIFIED="1574750118625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/trade_api$tradeApi.coverage" NAME="tradeApi Coverage Results" MODIFIED="1575266827704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -33,34 +38,39 @@
       <file leaf-file-name="tradeApi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tradeApi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4256">
-              <caret line="134" column="17" lean-forward="false" selection-start-line="134" selection-start-column="17" selection-end-line="134" selection-end-column="17" />
+            <state relative-caret-position="80">
+              <caret line="820" column="108" lean-forward="false" selection-start-line="820" selection-start-column="108" selection-end-line="820" selection-end-column="108" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="position.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/position.py">
+      <file leaf-file-name="heads.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/heads.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="80" column="21" lean-forward="false" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+            <state relative-caret-position="482">
+              <caret line="21" column="70" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="21" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreditSecondAnalysis.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CreditSecondAnalysis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="700">
+              <caret line="50" column="39" lean-forward="false" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
               <folding>
-                <marker date="1574681330454" expanded="true" signature="74:174" ph="SELECT * FRO... " />
-                <marker date="1574681330454" expanded="true" signature="605:663" ph="delete from " />
-                <marker date="1574681330454" expanded="true" signature="1325:1520" ph="SELECT id,tr... " />
-                <marker date="1574681330454" expanded="true" signature="1629:1694" ph="update settl... " />
-                <marker date="1574681330454" expanded="true" signature="1803:1939" ph="SELECT sum(n... " />
-                <marker date="1574681330454" expanded="true" signature="1803:1943" ph="SELECT sum(n... " />
-                <marker date="1574681330454" expanded="true" signature="1803:1955" ph="SELECT sum(n... " />
-                <marker date="1574681330454" expanded="true" signature="1803:1964" ph="SELECT sum(n... " />
-                <marker date="1574681330454" expanded="true" signature="2184:2340" ph="SELECT sum(n... " />
-                <marker date="1574681330454" expanded="true" signature="2688:2893" ph="SELECT bondc... " />
-                <marker date="1574681330454" expanded="true" signature="3512:3569" ph="SELECT bondc... " />
-                <marker date="1574681330454" expanded="true" signature="3668:3728" ph="SELECT [pass... " />
-                <marker date="1574681330454" expanded="true" signature="3847:3884" ph="UPDATE posit... " />
-                <marker date="1574681330454" expanded="true" signature="3847:3896" ph="UPDATE posit... " />
-                <marker date="1574681330454" expanded="true" signature="3954:4014" ph="SELECT [NotA... " />
+                <element signature="e#502#1489#0" expanded="false" />
+                <marker date="1575266555268" expanded="true" signature="96:308" ph="SELECT PROVI... " />
+                <marker date="1575266555268" expanded="true" signature="520:854" ph="SELECT [INDU... " />
+                <marker date="1575266555268" expanded="true" signature="1560:1866" ph="SELECT [DEAL... " />
+                <marker date="1575266555268" expanded="true" signature="2033:2319" ph="SELECT CONVE... " />
+                <marker date="1575266555268" expanded="true" signature="2511:2581" ph="SELECT * FRO... " />
+                <marker date="1575266555268" expanded="true" signature="2511:2582" ph="SELECT * FRO... " />
+                <marker date="1575266555268" expanded="true" signature="2511:2767" ph="SELECT * FRO... " />
+                <marker date="1575266555268" expanded="true" signature="2511:2776" ph="SELECT * FRO... " />
+                <marker date="1575266555268" expanded="true" signature="2800:3023" ph="SELECT disti... " />
               </folding>
             </state>
           </provider>
@@ -79,7 +89,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>purebondindex</find>
       <find>marketdealnew</find>
       <find>banksgeo</find>
       <find>comsum</find>
@@ -105,10 +114,11 @@
       <find>转股</find>
       <find>report</find>
       <find>ConvpRatio</find>
-      <find>postsettle</find>
       <find>netsellbondpost</find>
       <find>getTotalAmt</find>
       <find>changepositionstatus</find>
+      <find>postsettle</find>
+      <find>IndustryDealsProvince</find>
     </findStrings>
     <replaceStrings>
       <replace>position</replace>
@@ -166,11 +176,11 @@
         <option value="$PROJECT_DIR$/bondLend.py" />
         <option value="$PROJECT_DIR$/heads.py" />
         <option value="$PROJECT_DIR$/SpreadMonitor.py" />
-        <option value="$PROJECT_DIR$/CreditSecondAnalysis.py" />
         <option value="$PROJECT_DIR$/CureveMat.py" />
         <option value="$PROJECT_DIR$/LongBondIndex.py" />
-        <option value="$PROJECT_DIR$/tradeApi.py" />
         <option value="$PROJECT_DIR$/position.py" />
+        <option value="$PROJECT_DIR$/tradeApi.py" />
+        <option value="$PROJECT_DIR$/CreditSecondAnalysis.py" />
       </list>
     </option>
   </component>
@@ -202,7 +212,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -218,6 +227,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -526,17 +536,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19509594" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20575693" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30769232" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3087318" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39501038" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39501038" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35021323" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -556,7 +567,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="25" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -868,13 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CreditSecondAnalysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="23" column="95" lean-forward="false" selection-start-line="23" selection-start-column="95" selection-end-line="23" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LongBondIndex.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -882,42 +886,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/heads.py">
+    <entry file="file://$PROJECT_DIR$/position.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="24" selection-end-column="67" />
-          <folding />
+        <state relative-caret-position="323">
+          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+          <folding>
+            <marker date="1574760311496" expanded="true" signature="74:174" ph="SELECT * FRO... " />
+            <marker date="1574760311496" expanded="true" signature="605:663" ph="delete from " />
+            <marker date="1574760311496" expanded="true" signature="1368:1563" ph="SELECT id,tr... " />
+            <marker date="1574760311496" expanded="true" signature="1672:1737" ph="update settl... " />
+            <marker date="1574760311496" expanded="true" signature="1846:1982" ph="SELECT sum(n... " />
+            <marker date="1574760311496" expanded="true" signature="1846:1986" ph="SELECT sum(n... " />
+            <marker date="1574760311496" expanded="true" signature="1846:1998" ph="SELECT sum(n... " />
+            <marker date="1574760311496" expanded="true" signature="1846:2007" ph="SELECT sum(n... " />
+            <marker date="1574760311496" expanded="true" signature="2227:2383" ph="SELECT sum(n... " />
+            <marker date="1574760311496" expanded="true" signature="2731:2936" ph="SELECT bondc... " />
+            <marker date="1574760311496" expanded="true" signature="3555:3612" ph="SELECT bondc... " />
+            <marker date="1574760311496" expanded="true" signature="3711:3771" ph="SELECT [pass... " />
+            <marker date="1574760311496" expanded="true" signature="3890:3927" ph="UPDATE posit... " />
+            <marker date="1574760311496" expanded="true" signature="3890:3939" ph="UPDATE posit... " />
+            <marker date="1574760311496" expanded="true" signature="3997:4057" ph="SELECT [NotA... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tradeApi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4256">
-          <caret line="134" column="17" lean-forward="false" selection-start-line="134" selection-start-column="17" selection-end-line="134" selection-end-column="17" />
+        <state relative-caret-position="80">
+          <caret line="820" column="108" lean-forward="false" selection-start-line="820" selection-start-column="108" selection-end-line="820" selection-end-column="108" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/position.py">
+    <entry file="file://$PROJECT_DIR$/heads.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="80" column="21" lean-forward="false" selection-start-line="80" selection-start-column="21" selection-end-line="80" selection-end-column="21" />
+        <state relative-caret-position="482">
+          <caret line="21" column="70" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="21" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CreditSecondAnalysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="50" column="39" lean-forward="false" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
           <folding>
-            <marker date="1574681330454" expanded="true" signature="74:174" ph="SELECT * FRO... " />
-            <marker date="1574681330454" expanded="true" signature="605:663" ph="delete from " />
-            <marker date="1574681330454" expanded="true" signature="1325:1520" ph="SELECT id,tr... " />
-            <marker date="1574681330454" expanded="true" signature="1629:1694" ph="update settl... " />
-            <marker date="1574681330454" expanded="true" signature="1803:1939" ph="SELECT sum(n... " />
-            <marker date="1574681330454" expanded="true" signature="1803:1943" ph="SELECT sum(n... " />
-            <marker date="1574681330454" expanded="true" signature="1803:1955" ph="SELECT sum(n... " />
-            <marker date="1574681330454" expanded="true" signature="1803:1964" ph="SELECT sum(n... " />
-            <marker date="1574681330454" expanded="true" signature="2184:2340" ph="SELECT sum(n... " />
-            <marker date="1574681330454" expanded="true" signature="2688:2893" ph="SELECT bondc... " />
-            <marker date="1574681330454" expanded="true" signature="3512:3569" ph="SELECT bondc... " />
-            <marker date="1574681330454" expanded="true" signature="3668:3728" ph="SELECT [pass... " />
-            <marker date="1574681330454" expanded="true" signature="3847:3884" ph="UPDATE posit... " />
-            <marker date="1574681330454" expanded="true" signature="3847:3896" ph="UPDATE posit... " />
-            <marker date="1574681330454" expanded="true" signature="3954:4014" ph="SELECT [NotA... " />
+            <element signature="e#502#1489#0" expanded="false" />
+            <marker date="1575266555268" expanded="true" signature="96:308" ph="SELECT PROVI... " />
+            <marker date="1575266555268" expanded="true" signature="520:854" ph="SELECT [INDU... " />
+            <marker date="1575266555268" expanded="true" signature="1560:1866" ph="SELECT [DEAL... " />
+            <marker date="1575266555268" expanded="true" signature="2033:2319" ph="SELECT CONVE... " />
+            <marker date="1575266555268" expanded="true" signature="2511:2581" ph="SELECT * FRO... " />
+            <marker date="1575266555268" expanded="true" signature="2511:2582" ph="SELECT * FRO... " />
+            <marker date="1575266555268" expanded="true" signature="2511:2767" ph="SELECT * FRO... " />
+            <marker date="1575266555268" expanded="true" signature="2511:2776" ph="SELECT * FRO... " />
+            <marker date="1575266555268" expanded="true" signature="2800:3023" ph="SELECT disti... " />
           </folding>
         </state>
       </provider>

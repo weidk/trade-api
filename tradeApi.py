@@ -813,6 +813,16 @@ def industrydeals():
     except:
         pass
 
+# 查询异常成交
+@app.route('/api/abnormaldeals', methods=['POST'])
+def abnormaldeals():
+    try:
+        data = request.json
+        rst = CreditAnalysis.QueryAbnormalDeals(data['start'], data['end'],data['deviation'],data['dealyield'])
+        return rst
+    except:
+        pass
+
 # 查询成交明细
 @app.route('/api/creditdealdetail', methods=['POST'])
 def creditdealdetail():

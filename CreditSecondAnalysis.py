@@ -36,3 +36,16 @@ def QueryTurnoverRate(startDate):
     Df.tradedate = Df.tradedate.astype('str')
     return Df.to_json(orient="records")
 
+# 查询异常成交
+def QueryAbnormalDeals(startTime,endTime,deviation,dealyield):
+    Df = pd.read_sql("SELECT * FROM [creditdb].[dbo].[BONDDEALDETAIL_vty]  where  deviation>="+str(deviation)+"   and   DEALYIELD>="+str(dealyield)+"  and   CONVERT(varchar(100), [TRANSACTTIME], 23)>='"+startTime+"' and   CONVERT(varchar(100), [TRANSACTTIME], 23)<='"+endTime+"'",Engine)
+    Df2 = pd.read_sql("SELECT distinct(dealbondname) bondname FROM [creditdb].[dbo].[BONDDEALDETAIL_vty]  where  (deviation>="+str(deviation)+"   or   DEALYIELD>="+str(dealyield)+")  and   CONVERT(varchar(100), [TRANSACTTIME], 23)<'"+startTime+"'",Engine)
+    def isNew(name):
+        if any(Df2.bondname == name):
+            return False
+        else:
+            return True
+    Df['ISNEW'] = Df.DEALBONDNAME.apply(isNew)
+    Df = Df.sort('ISNEW',ascending=False)
+    Df.TRANSACTTIME = Df.TRANSACTTIME.astype('str')
+    return Df.to_json(orient="records")
