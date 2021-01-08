@@ -1,24 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/MarketScore.py" line="1" mnemonic="3" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="08832245-c459-452c-a970-8571a03800af" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CreditSecondAnalysis.py" afterPath="$PROJECT_DIR$/CreditSecondAnalysis.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/position.py" afterPath="$PROJECT_DIR$/position.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tradeApi.py" afterPath="$PROJECT_DIR$/tradeApi.py" />
+      <change afterPath="$PROJECT_DIR$/AdjustYield.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CashMarket.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FundIndex.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IRSDetail.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/checkstatusws/.idea/checkstatusws.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/checkstatusws/checkstatus.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jobs/AdjustCurve/.idea/AdjustCurve.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jobs/AdjustCurve/AdjustCurve.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jobs/CalWithDraw.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jobs/NCDBalance.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jobs/RedisJobs/.idea/RedisJobs.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jobs/RedisJobs/BondCurve.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jobs/RedisJobs/BondLend.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jobs/RedisJobs/CurveMat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jobs/RedisJobs/FunctionHeads.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jobs/RedisJobs/HidenCredit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jobs/RedisJobs/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jobs/ResetAccount.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jobs/隐含评级推送/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/trade-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/trade-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BondInCurve.py" beforeDir="false" afterPath="$PROJECT_DIR$/BondInCurve.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CDFunctionsDailyJob.py" beforeDir="false" afterPath="$PROJECT_DIR$/CDFunctionsDailyJob.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CDTornado-api/CDFunctionsDailyJob.py" beforeDir="false" afterPath="$PROJECT_DIR$/CDTornado-api/CDFunctionsDailyJob.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreditSecondAnalysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/CreditSecondAnalysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CureveMat.py" beforeDir="false" afterPath="$PROJECT_DIR$/CureveMat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HidenCredit.py" beforeDir="false" afterPath="$PROJECT_DIR$/HidenCredit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LongBondIndex.py" beforeDir="false" afterPath="$PROJECT_DIR$/LongBondIndex.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarketDeal.py" beforeDir="false" afterPath="$PROJECT_DIR$/MarketDeal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarketMakerServer/.vs/MarketMakerServer/DesignTimeBuild/.dtbcache" beforeDir="false" afterPath="$PROJECT_DIR$/MarketMakerServer/.vs/MarketMakerServer/DesignTimeBuild/.dtbcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarketMakerServer/MarketMakerServer/obj/Debug/netcoreapp2.1/MarketMakerServer.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MarketMakerServer/MarketMakerServer/obj/Debug/netcoreapp2.1/MarketMakerServer.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarketMakerServer/MarketMakerServer/obj/Debug/netcoreapp2.1/MarketMakerServer.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MarketMakerServer/MarketMakerServer/obj/Debug/netcoreapp2.1/MarketMakerServer.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarketMakerServer/MarketMakerServer/obj/MarketMakerServer.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MarketMakerServer/MarketMakerServer/obj/MarketMakerServer.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarketMakerServer/MarketMakerServer/obj/MarketMakerServer.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/MarketMakerServer/MarketMakerServer/obj/MarketMakerServer.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarketMakerServer/MarketMakerServer/obj/MarketMakerServer.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/MarketMakerServer/MarketMakerServer/obj/MarketMakerServer.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarketMakerServer/MarketMakerServer/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/MarketMakerServer/MarketMakerServer/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarketScore.py" beforeDir="false" afterPath="$PROJECT_DIR$/MarketScore.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewBondRate.py" beforeDir="false" afterPath="$PROJECT_DIR$/NewBondRate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/.vs/RealtimeApi/DesignTimeBuild/.dtbcache" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/.vs/RealtimeApi/DesignTimeBuild/.dtbcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/Funcs/MonitorBp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/Funcs/MonitorBp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Debug/netcoreapp2.1/RealtimeApi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Debug/netcoreapp2.1/RealtimeApi.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Debug/netcoreapp2.1/RealtimeApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Debug/netcoreapp2.1/RealtimeApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Debug/netcoreapp2.1/RealtimeApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Debug/netcoreapp2.1/RealtimeApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Debug/netcoreapp2.1/RealtimeApi.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Debug/netcoreapp2.1/RealtimeApi.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Debug/netcoreapp2.1/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Debug/netcoreapp2.1/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi/RealtimeApi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi/RealtimeApi.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi/RealtimeApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi/RealtimeApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi/RealtimeApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi/RealtimeApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/RealtimeApi/web.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/bin/Release/netcoreapp2.1/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Debug/netcoreapp2.1/RealtimeApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Debug/netcoreapp2.1/RealtimeApi.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Debug/netcoreapp2.1/RealtimeApi.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Debug/netcoreapp2.1/RealtimeApi.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Debug/netcoreapp2.1/RealtimeApi.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Debug/netcoreapp2.1/RealtimeApi.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Debug/netcoreapp2.1/RealtimeApi.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Debug/netcoreapp2.1/RealtimeApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Debug/netcoreapp2.1/RealtimeApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Debug/netcoreapp2.1/RealtimeApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Debug/netcoreapp2.1/RealtimeApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/RealtimeApi.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/RealtimeApi.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/RealtimeApi.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/RealtimeApi.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/RealtimeApi.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/RealtimeApi.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/PubTmp/Out/RealtimeApi.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/PubTmp/Out/RealtimeApi.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/PubTmp/Out/RealtimeApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/PubTmp/Out/RealtimeApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/PubTmp/Out/RealtimeApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/PubTmp/Out/RealtimeApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/PubTmp/Out/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/PubTmp/Out/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/PubTmp/Out/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/PubTmp/Out/web.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/RealtimeApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/RealtimeApi.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/RealtimeApi.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/RealtimeApi.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/RealtimeApi.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/RealtimeApi.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/RealtimeApi.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/RealtimeApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/RealtimeApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/RealtimeApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/Release/netcoreapp2.1/RealtimeApi.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/RealtimeApi/RealtimeApi/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReportChart.py" beforeDir="false" afterPath="$PROJECT_DIR$/ReportChart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SaleStatistic.py" beforeDir="false" afterPath="$PROJECT_DIR$/SaleStatistic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tools/DataBaseHelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tools/DataBaseHelper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bondLend.py" beforeDir="false" afterPath="$PROJECT_DIR$/bondLend.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/heads.py" beforeDir="false" afterPath="$PROJECT_DIR$/heads.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/CDPositionjob.py" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/CDPositionjob.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/MarketScoreJob.py" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/MarketScoreJob.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/SPositionjob.py" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/SPositionjob.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/做市統計/MarketMakerStatistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/做市統計/MarketMakerStatistics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/position.py" beforeDir="false" afterPath="$PROJECT_DIR$/position.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tradeApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/tradeApi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/大事件.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/大事件.xlsx" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/trade_api$tradeApi.coverage" NAME="tradeApi Coverage Results" MODIFIED="1575266827704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/trade_api$trade_api.coverage" NAME="trade-api Coverage Results" MODIFIED="1594955396073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/trade_api$tradeApi_position.coverage" NAME="tradeApi_position Coverage Results" MODIFIED="1575360509229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/trade_api$CalWithDraw.coverage" NAME="CalWithDraw Coverage Results" MODIFIED="1594955198683" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jobs" />
+    <SUITE FILE_PATH="coverage/trade_api$NCDBalance.coverage" NAME="NCDBalance Coverage Results" MODIFIED="1591844603570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/jobs" />
+    <SUITE FILE_PATH="coverage/trade_api$tradeApi.coverage" NAME="tradeApi Coverage Results" MODIFIED="1601261688723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -29,54 +114,8 @@
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="trade-api" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tradeApi.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tradeApi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="820" column="108" lean-forward="false" selection-start-line="820" selection-start-column="108" selection-end-line="820" selection-end-column="108" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="heads.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/heads.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="21" column="70" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="21" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreditSecondAnalysis.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CreditSecondAnalysis.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="50" column="39" lean-forward="false" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
-              <folding>
-                <element signature="e#502#1489#0" expanded="false" />
-                <marker date="1575266555268" expanded="true" signature="96:308" ph="SELECT PROVI... " />
-                <marker date="1575266555268" expanded="true" signature="520:854" ph="SELECT [INDU... " />
-                <marker date="1575266555268" expanded="true" signature="1560:1866" ph="SELECT [DEAL... " />
-                <marker date="1575266555268" expanded="true" signature="2033:2319" ph="SELECT CONVE... " />
-                <marker date="1575266555268" expanded="true" signature="2511:2581" ph="SELECT * FRO... " />
-                <marker date="1575266555268" expanded="true" signature="2511:2582" ph="SELECT * FRO... " />
-                <marker date="1575266555268" expanded="true" signature="2511:2767" ph="SELECT * FRO... " />
-                <marker date="1575266555268" expanded="true" signature="2511:2776" ph="SELECT * FRO... " />
-                <marker date="1575266555268" expanded="true" signature="2800:3023" ph="SELECT disti... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -87,161 +126,28 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>marketdealnew</find>
-      <find>banksgeo</find>
-      <find>comsum</find>
-      <find>comsu</find>
-      <find>coms</find>
-      <find>com</find>
-      <find>consum</find>
-      <find>consu</find>
-      <find>cons</find>
-      <find>con</find>
-      <find>co</find>
-      <find>c</find>
-      <find>s</find>
-      <find>su</find>
-      <find>sum</find>
-      <find>createNewPositon</find>
-      <find>QueryDealsDetail</find>
-      <find>settledownpositon</find>
-      <find>creditturnoverrate</find>
-      <find>reletivecurve</find>
-      <find>CSTPCBMMARKETMAKINGQUOTE</find>
-      <find>LBIndex</find>
-      <find>转股</find>
-      <find>report</find>
-      <find>ConvpRatio</find>
-      <find>netsellbondpost</find>
-      <find>getTotalAmt</find>
-      <find>changepositionstatus</find>
-      <find>postsettle</find>
-      <find>IndustryDealsProvince</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>position</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/TradeApi.py" />
-        <option value="$PROJECT_DIR$/apis.py" />
-        <option value="$PROJECT_DIR$/QuoteStatus.js" />
-        <option value="$PROJECT_DIR$/quoteStatus.py" />
-        <option value="$PROJECT_DIR$/../../python/BondDailyAmt/main.py" />
-        <option value="$PROJECT_DIR$/../../python/导出成交单/Funcs.py" />
-        <option value="$PROJECT_DIR$/jobs/SPositionjob.py" />
-        <option value="$PROJECT_DIR$/jobs/CDPositionjob.py" />
-        <option value="$PROJECT_DIR$/jobs/WriteDailyReport.py" />
-        <option value="$PROJECT_DIR$/Tools/MongoHelper.py" />
-        <option value="$PROJECT_DIR$/jobs/MarketMakerStatistics.py" />
-        <option value="$PROJECT_DIR$/jobs/WriteDailyReport/WriteDailyReport.py" />
-        <option value="$PROJECT_DIR$/SelfMarketMaker.py" />
-        <option value="$PROJECT_DIR$/SystemMonitor.py" />
-        <option value="$PROJECT_DIR$/LichaMat.py" />
-        <option value="$PROJECT_DIR$/AddNewBondHq.py" />
-        <option value="D:/Program Files/Anaconda3/Lib/site-packages/gevent/baseserver.py" />
-        <option value="$PROJECT_DIR$/autores.py" />
-        <option value="$USER_HOME$/Desktop/data_reg.py" />
-        <option value="$PROJECT_DIR$/HidenCredit.py" />
-        <option value="$PROJECT_DIR$/jobs/heads.py" />
-        <option value="$PROJECT_DIR$/jobs/MarketScoreJob.py" />
-        <option value="$PROJECT_DIR$/G.py" />
-        <option value="$PROJECT_DIR$/Initial.py" />
-        <option value="$USER_HOME$/Desktop/导出每日中介成交/Funcs.py" />
-        <option value="$PROJECT_DIR$/Todo.py" />
-        <option value="$PROJECT_DIR$/XBond.py" />
-        <option value="$PROJECT_DIR$/XBonds.py" />
-        <option value="$PROJECT_DIR$/Global.py" />
-        <option value="$PROJECT_DIR$/ReviewHistory.py" />
-        <option value="$PROJECT_DIR$/NewBondRate.py" />
-        <option value="$PROJECT_DIR$/FuturePosition.py" />
-        <option value="$PROJECT_DIR$/Review.py" />
-        <option value="$PROJECT_DIR$/CDFunctionsDailyJob.py" />
-        <option value="$PROJECT_DIR$/MarketScore.py" />
-        <option value="$PROJECT_DIR$/PredictIndex.py" />
-        <option value="$PROJECT_DIR$/ReviewStrategy.py" />
-        <option value="$PROJECT_DIR$/ReportChart.py" />
-        <option value="$PROJECT_DIR$/MarketDeal.py" />
-        <option value="$PROJECT_DIR$/SaleStatistic.py" />
-        <option value="$PROJECT_DIR$/Tools/DataBaseHelper.py" />
-        <option value="$PROJECT_DIR$/BondInCurve.py" />
-        <option value="$PROJECT_DIR$/Bloomebergnews.py" />
-        <option value="$PROJECT_DIR$/bondLend.py" />
-        <option value="$PROJECT_DIR$/heads.py" />
-        <option value="$PROJECT_DIR$/SpreadMonitor.py" />
-        <option value="$PROJECT_DIR$/CureveMat.py" />
-        <option value="$PROJECT_DIR$/LongBondIndex.py" />
-        <option value="$PROJECT_DIR$/position.py" />
-        <option value="$PROJECT_DIR$/tradeApi.py" />
-        <option value="$PROJECT_DIR$/CreditSecondAnalysis.py" />
-      </list>
-    </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-1928" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
-  </component>
+  <component name="ProjectId" id="1iwIebJdmHdPQDSj0CBjBzKSr3P" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trade-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="trade-api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../python/PageMonitorNew" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.selected.package.eslint" value="" />
     <property name="node.js.selected.package.standard" value="" />
-    <property name="nodejs_interpreter_path" value="D:/Program Files/nodejs/node" />
+    <property name="nodejs_interpreter_path" value="node" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyDebuggerOptionsProvider">
@@ -252,39 +158,44 @@
       <recent name="D:\workspace\交易接口\trade-api\jobs" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Python.tradeApi">
-    <configuration default="false" name="MarketDeal" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <module name="trade-api" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CalWithDraw" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="trade-api" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jobs" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="trade-api" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MarketDeal.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jobs/CalWithDraw.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <configuration default="false" name="MarketScore" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="MarketScore" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="trade-api" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -295,15 +206,62 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="trade-api" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MarketScore.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <configuration default="false" name="tradeApi" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="NCDBalance" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="trade-api" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/jobs" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/jobs/NCDBalance.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="trade-api" type="PythonConfigurationType" factoryName="Python" singleton="true">
+      <module name="trade-api" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\workspace\交易接口\trade-api\tradeApi.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tradeApi" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="trade-api" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -314,196 +272,80 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="trade-api" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tradeApi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+    <configuration name="tradeApi_position" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="trade-api" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="trade-api" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="trade-api" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="trade-api" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="trade-api" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tradeApi_position.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <module name="trade-api" />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+    <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
       <arguments />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="trade-api" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
+      <method v="2" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
+      <module name="trade-api" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="trade-api" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_regexPattern" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;.&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method />
+      <method v="2" />
     </configuration>
-    <configuration default="false" name="trade-api" type="PythonConfigurationType" factoryName="Python" singleton="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="trade-api" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="D:\workspace\交易接口\trade-api\tradeApi.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Python.trade-api" />
-      <item index="1" class="java.lang.String" itemvalue="Python.MarketDeal" />
-      <item index="2" class="java.lang.String" itemvalue="Python.MarketScore" />
-      <item index="3" class="java.lang.String" itemvalue="Python.tradeApi" />
+    <list>
+      <item itemvalue="Python.trade-api" />
+      <item itemvalue="Python.CalWithDraw" />
+      <item itemvalue="Python.MarketScore" />
+      <item itemvalue="Python.NCDBalance" />
+      <item itemvalue="Python.tradeApi" />
+      <item itemvalue="Python.tradeApi_position" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.tradeApi" />
+      <list>
+        <item itemvalue="Python.tradeApi" />
+        <item itemvalue="Python.tradeApi_position" />
+        <item itemvalue="Python.NCDBalance" />
+        <item itemvalue="Python.MarketScore" />
+        <item itemvalue="Python.CalWithDraw" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="StructureViewFactory">
     <option name="ACTIVE_ACTIONS" value=",SHOW_INHERITED" />
@@ -519,11 +361,29 @@
       <option name="presentableId" value="Default" />
       <updated>1519969499392</updated>
       <workItem from="1572921206905" duration="36000" />
+      <workItem from="1602812329639" duration="6000" />
+      <workItem from="1602812788440" duration="415000" />
+      <workItem from="1602813245896" duration="26792000" />
+      <workItem from="1603347999247" duration="2618000" />
+      <workItem from="1603351751828" duration="10000" />
+      <workItem from="1603417775109" duration="1385000" />
+      <workItem from="1603431863562" duration="1444000" />
+      <workItem from="1604391186407" duration="2113000" />
+      <workItem from="1604479894582" duration="132000" />
+      <workItem from="1604638762698" duration="4383000" />
+      <workItem from="1604906507897" duration="4233000" />
+      <workItem from="1605058570701" duration="9029000" />
+      <workItem from="1605490217613" duration="201000" />
+      <workItem from="1605513325495" duration="1925000" />
+      <workItem from="1605750520677" duration="1222000" />
+      <workItem from="1606294529212" duration="2891000" />
+      <workItem from="1606442344335" duration="1117000" />
+      <workItem from="1606793594588" duration="847000" />
+      <workItem from="1606876892318" duration="74000" />
+      <workItem from="1606877262645" duration="301000" />
+      <workItem from="1606889102227" duration="524000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -534,40 +394,95 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20575693" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3087318" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39501038" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35021323" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="WindowStateProjectService">
+    <state x="709" y="298" key="FileChooserDialogImpl" timestamp="1605077475714">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="-668" y="530" key="FileChooserDialogImpl/0.0.1858.1080/-1080.0.1080.1920@-1080.0.1080.1920" timestamp="1604906532448" />
+    <state x="709" y="298" key="FileChooserDialogImpl/0.0.1858.1080/-1080.0.1080.1920@0.0.1858.1080" timestamp="1605077475714" />
+    <state width="1815" height="336" key="GridCell.Tab.0.bottom" timestamp="1604393301884">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1037" height="562" key="GridCell.Tab.0.bottom/0.0.1858.1080/-1080.0.1080.1920@-1080.0.1080.1920" timestamp="1604391588563" />
+    <state width="1815" height="336" key="GridCell.Tab.0.bottom/0.0.1858.1080/-1080.0.1080.1920@0.0.1858.1080" timestamp="1604393301884" />
+    <state width="1815" height="336" key="GridCell.Tab.0.center" timestamp="1604393301884">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1037" height="562" key="GridCell.Tab.0.center/0.0.1858.1080/-1080.0.1080.1920@-1080.0.1080.1920" timestamp="1604391588562" />
+    <state width="1815" height="336" key="GridCell.Tab.0.center/0.0.1858.1080/-1080.0.1080.1920@0.0.1858.1080" timestamp="1604393301884" />
+    <state width="1815" height="336" key="GridCell.Tab.0.left" timestamp="1604393301884">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1037" height="562" key="GridCell.Tab.0.left/0.0.1858.1080/-1080.0.1080.1920@-1080.0.1080.1920" timestamp="1604391588561" />
+    <state width="1815" height="336" key="GridCell.Tab.0.left/0.0.1858.1080/-1080.0.1080.1920@0.0.1858.1080" timestamp="1604393301884" />
+    <state width="1815" height="336" key="GridCell.Tab.0.right" timestamp="1604393301884">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1037" height="562" key="GridCell.Tab.0.right/0.0.1858.1080/-1080.0.1080.1920@-1080.0.1080.1920" timestamp="1604391588562" />
+    <state width="1815" height="336" key="GridCell.Tab.0.right/0.0.1858.1080/-1080.0.1080.1920@0.0.1858.1080" timestamp="1604393301884" />
+    <state width="1815" height="336" key="GridCell.Tab.1.bottom" timestamp="1604393301885">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1037" height="290" key="GridCell.Tab.1.bottom/0.0.1858.1080/-1080.0.1080.1920@-1080.0.1080.1920" timestamp="1603348601744" />
+    <state width="1815" height="336" key="GridCell.Tab.1.bottom/0.0.1858.1080/-1080.0.1080.1920@0.0.1858.1080" timestamp="1604393301885" />
+    <state width="1815" height="336" key="GridCell.Tab.1.center" timestamp="1604393301884">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1037" height="290" key="GridCell.Tab.1.center/0.0.1858.1080/-1080.0.1080.1920@-1080.0.1080.1920" timestamp="1603348601742" />
+    <state width="1815" height="336" key="GridCell.Tab.1.center/0.0.1858.1080/-1080.0.1080.1920@0.0.1858.1080" timestamp="1604393301884" />
+    <state width="1815" height="336" key="GridCell.Tab.1.left" timestamp="1604393301884">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1037" height="290" key="GridCell.Tab.1.left/0.0.1858.1080/-1080.0.1080.1920@-1080.0.1080.1920" timestamp="1603348601742" />
+    <state width="1815" height="336" key="GridCell.Tab.1.left/0.0.1858.1080/-1080.0.1080.1920@0.0.1858.1080" timestamp="1604393301884" />
+    <state width="1815" height="336" key="GridCell.Tab.1.right" timestamp="1604393301885">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state width="1037" height="290" key="GridCell.Tab.1.right/0.0.1858.1080/-1080.0.1080.1920@-1080.0.1080.1920" timestamp="1603348601743" />
+    <state width="1815" height="336" key="GridCell.Tab.1.right/0.0.1858.1080/-1080.0.1080.1920@0.0.1858.1080" timestamp="1604393301885" />
+    <state x="-1025" y="386" key="SettingsEditor" timestamp="1603418899748">
+      <screen x="-1080" y="0" width="1080" height="1920" />
+    </state>
+    <state x="-1025" y="386" key="SettingsEditor/0.0.1858.1080/-1080.0.1080.1920@-1080.0.1080.1920" timestamp="1603418899748" />
+    <state x="543" y="186" key="SettingsEditor/0.0.1858.1080/-1080.0.1080.1920@0.0.1858.1080" timestamp="1602813041116" />
+    <state x="-1278" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1606876892358">
+      <screen x="-1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="621" y="367" key="com.intellij.ide.util.TipDialog/0.0.1857.1080/-1080.0.1080.1920@0.0.1857.1080" timestamp="1605513330550" />
+    <state x="-1278" y="367" key="com.intellij.ide.util.TipDialog/0.0.1857.1080/-1920.0.1920.1080@-1920.0.1920.1080" timestamp="1606442346317" />
+    <state x="-1278" y="367" key="com.intellij.ide.util.TipDialog/0.0.1857.1080/-1920.0.1920.1080@0.0.1857.1080" timestamp="1606876892358" />
+    <state x="-719" y="652" key="com.intellij.ide.util.TipDialog/0.0.1858.1080/-1080.0.1080.1920@-1080.0.1080.1920" timestamp="1604906510263" />
+    <state x="621" y="367" key="com.intellij.ide.util.TipDialog/0.0.1858.1080/-1080.0.1080.1920@0.0.1858.1080" timestamp="1605058567253" />
+    <state x="-986" y="699" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1603078561229">
+      <screen x="-1080" y="0" width="1080" height="1920" />
+    </state>
+    <state x="-986" y="699" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1858.1080/-1080.0.1080.1920@-1080.0.1080.1920" timestamp="1603078561229" />
+    <state x="60" y="213" width="1697" height="862" key="find.popup" timestamp="1605513388260">
+      <screen x="0" y="0" width="1857" height="1080" />
+    </state>
+    <state x="60" y="213" width="1697" height="862" key="find.popup/0.0.1857.1080/-1080.0.1080.1920@0.0.1857.1080" timestamp="1605513388260" />
+    <state x="-1045" y="378" width="986" height="895" key="find.popup/0.0.1858.1080/-1080.0.1080.1920@-1080.0.1080.1920" timestamp="1603432740035" />
+    <state x="60" y="213" width="1697" height="504" key="find.popup/0.0.1858.1080/-1080.0.1080.1920@0.0.1858.1080" timestamp="1604911435455" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="29" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/FundIndex.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -575,376 +490,9 @@
       </configuration>
     </watches-manager>
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tradeApi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15262">
-          <caret line="588" column="11" lean-forward="false" selection-start-line="588" selection-start-column="11" selection-end-line="588" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/heads.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="24" column="67" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="24" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CureveMat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../python/生成操作指令书 - irs/funs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="34" column="74" lean-forward="false" selection-start-line="34" selection-start-column="74" selection-end-line="34" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../python/生成操作指令书 - 资金室/head.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../python/生成操作指令书 - 资金室/funs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="49" column="12" lean-forward="false" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jobs/SPositionjob.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="35" column="7" lean-forward="true" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jobs/CDPositionjob.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="99" lean-forward="false" selection-start-line="3" selection-start-column="99" selection-end-line="3" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../python/蜘蛛网策略/head.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files/Anaconda3/Lib/site-packages/pandas/stats/moments.py" />
-    <entry file="file://$PROJECT_DIR$/AddNewBondHq.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-741">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NewBondRate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="117" column="4" lean-forward="false" selection-start-line="117" selection-start-column="4" selection-end-line="117" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../python/回测/Func.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-156">
-          <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../python/Macro/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="36" column="30" lean-forward="false" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MarketMakerServer/MarketMakerServer/bin/Release/netcoreapp2.1/MarketMakerServerPublish/MarketMakerServer.deps.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="3603" column="51" lean-forward="false" selection-start-line="3603" selection-start-column="51" selection-end-line="3603" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-952285868/builtins.py" />
-    <entry file="file://$PROJECT_DIR$/../../python/Macro/PMI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files/Anaconda3/Lib/site-packages/gevent/pywsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1156">
-          <caret line="1173" column="8" lean-forward="false" selection-start-line="1173" selection-start-column="8" selection-end-line="1173" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files/Anaconda3/Lib/site-packages/gevent/baseserver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="342" column="8" lean-forward="false" selection-start-line="342" selection-start-column="8" selection-end-line="342" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../python/Macro/XBondIns.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="228" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="228" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PredictIndex.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" column="51" lean-forward="false" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SelfMarketMaker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" column="39" lean-forward="false" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-952285868/cx_Oracle/__init__.py" />
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-952285868/cx_Oracle/connect.py" />
-    <entry file="file://$PROJECT_DIR$/LichaMat.py" />
-    <entry file="file://$PROJECT_DIR$/ReviewStrategy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Global.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Initial.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ReviewHistory.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/XBonds.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SaleStatistic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="167" column="47" lean-forward="false" selection-start-line="167" selection-start-column="47" selection-end-line="167" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FuturePosition.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="11" lean-forward="false" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MarketScore.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="12" column="394" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="394" />
-          <folding>
-            <element signature="e#673#810#0" expanded="false" />
-            <marker date="1555397541557" expanded="true" signature="72:97" ph="select * fro... MarketScore" />
-            <marker date="1555397541557" expanded="true" signature="257:625" ph="select * fro... openquery" />
-            <marker date="1555397541557" expanded="true" signature="1407:1892" ph="select * fro... openquery" />
-            <marker date="1555397541557" expanded="true" signature="1407:1901" ph="select * fro... openquery" />
-            <marker date="1555397541557" expanded="true" signature="2079:2368" ph="select * fro... openquery" />
-            <marker date="1555397541557" expanded="true" signature="2456:2751" ph="select * fro... openquery" />
-            <marker date="1555397541557" expanded="true" signature="2810:3001" ph="select * fro... openquery" />
-            <marker date="1555397541557" expanded="true" signature="2810:3038" ph="select * fro... openquery" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MarketDeal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2857">
-          <caret line="290" column="164" lean-forward="true" selection-start-line="290" selection-start-column="11" selection-end-line="290" selection-end-column="164" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CDFunctionsDailyJob.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BondInCurve.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="27" column="39" lean-forward="true" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tools/DateHelper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Bloomebergnews.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tools/DataBaseHelper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HidenCredit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2548">
-          <caret line="98" column="16" lean-forward="false" selection-start-line="98" selection-start-column="16" selection-end-line="98" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bondLend.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="136" column="0" lean-forward="true" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpreadMonitor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files/Anaconda3/Lib/site-packages/pandas/io/json.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1988">
-          <caret line="638" column="4" lean-forward="false" selection-start-line="638" selection-start-column="4" selection-end-line="638" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ReportChart.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="38" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Program Files/Anaconda3/Lib/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="1624" column="0" lean-forward="false" selection-start-line="1624" selection-start-column="0" selection-end-line="1624" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CureveMat.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LongBondIndex.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/position.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="29" column="36" lean-forward="true" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
-          <folding>
-            <marker date="1574760311496" expanded="true" signature="74:174" ph="SELECT * FRO... " />
-            <marker date="1574760311496" expanded="true" signature="605:663" ph="delete from " />
-            <marker date="1574760311496" expanded="true" signature="1368:1563" ph="SELECT id,tr... " />
-            <marker date="1574760311496" expanded="true" signature="1672:1737" ph="update settl... " />
-            <marker date="1574760311496" expanded="true" signature="1846:1982" ph="SELECT sum(n... " />
-            <marker date="1574760311496" expanded="true" signature="1846:1986" ph="SELECT sum(n... " />
-            <marker date="1574760311496" expanded="true" signature="1846:1998" ph="SELECT sum(n... " />
-            <marker date="1574760311496" expanded="true" signature="1846:2007" ph="SELECT sum(n... " />
-            <marker date="1574760311496" expanded="true" signature="2227:2383" ph="SELECT sum(n... " />
-            <marker date="1574760311496" expanded="true" signature="2731:2936" ph="SELECT bondc... " />
-            <marker date="1574760311496" expanded="true" signature="3555:3612" ph="SELECT bondc... " />
-            <marker date="1574760311496" expanded="true" signature="3711:3771" ph="SELECT [pass... " />
-            <marker date="1574760311496" expanded="true" signature="3890:3927" ph="UPDATE posit... " />
-            <marker date="1574760311496" expanded="true" signature="3890:3939" ph="UPDATE posit... " />
-            <marker date="1574760311496" expanded="true" signature="3997:4057" ph="SELECT [NotA... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tradeApi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="820" column="108" lean-forward="false" selection-start-line="820" selection-start-column="108" selection-end-line="820" selection-end-column="108" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/heads.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="21" column="70" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="21" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CreditSecondAnalysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="50" column="39" lean-forward="false" selection-start-line="50" selection-start-column="39" selection-end-line="50" selection-end-column="39" />
-          <folding>
-            <element signature="e#502#1489#0" expanded="false" />
-            <marker date="1575266555268" expanded="true" signature="96:308" ph="SELECT PROVI... " />
-            <marker date="1575266555268" expanded="true" signature="520:854" ph="SELECT [INDU... " />
-            <marker date="1575266555268" expanded="true" signature="1560:1866" ph="SELECT [DEAL... " />
-            <marker date="1575266555268" expanded="true" signature="2033:2319" ph="SELECT CONVE... " />
-            <marker date="1575266555268" expanded="true" signature="2511:2581" ph="SELECT * FRO... " />
-            <marker date="1575266555268" expanded="true" signature="2511:2582" ph="SELECT * FRO... " />
-            <marker date="1575266555268" expanded="true" signature="2511:2767" ph="SELECT * FRO... " />
-            <marker date="1575266555268" expanded="true" signature="2511:2776" ph="SELECT * FRO... " />
-            <marker date="1575266555268" expanded="true" signature="2800:3023" ph="SELECT disti... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/trade_api$trade_api.coverage" NAME="trade-api Coverage Results" MODIFIED="1603078525739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/trade_api$tradeApi.coverage" NAME="tradeApi Coverage Results" MODIFIED="1604392787569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="masterDetails">
     <states>

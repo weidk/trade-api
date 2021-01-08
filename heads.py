@@ -13,6 +13,7 @@ from pandas.io.json import json_normalize
 import sqlalchemy
 from functools import wraps
 import Tools.DateHelper as dh
+import re
 import Tools.DataBaseHelper as DB
 import warnings
 warnings.simplefilter(action = "ignore", category = Warning)
@@ -28,7 +29,7 @@ import Tools.MongoHelper as MG
 crmDb = MG._connect_mongo("10.28.7.35",39362,"datacenter","datacenter","datacenter")
 
 import redis
-pool = redis.ConnectionPool(host='localhost', port=6379, decode_responses=True)
+pool = redis.ConnectionPool(host='192.168.9.147', port=6379, decode_responses=True)
 r = redis.Redis(connection_pool=pool)
 
 
@@ -59,3 +60,6 @@ import CreditSecondAnalysis as CreditAnalysis
 import BondInCurve as BIC
 import Bloomebergnews as Bloom
 import SpreadMonitor as Spread
+import IRSDetail as IRS
+import AdjustYield as AY
+import CashMarket as CASH

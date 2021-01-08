@@ -23,7 +23,7 @@ def changeTrader(trader):
 # 匯總成交數據
 def GroupDealData(startDate,endDate):
     DealDF = pd.read_sql(
-        "select * from openquery(TEST,'select t.trademethod,t.selftradername,sum(t.totalfacevalue)/100000000 amt from marketanalysis.CSTPCBMEXECUTION t where  to_char(tradedate, ''yyyy-mm-dd'')  >= ''" + startDate + "''   and  to_char(tradedate, ''yyyy-mm-dd'')  <= ''" + endDate + "''   and t.typeofdeal=''尝试做市''   group by t.selftradername,t.trademethod')",
+        "select * from openquery(TEST1,'select t.trademethod,t.selftradername,sum(t.totalfacevalue)/100000000 amt from marketanalysis.CSTPCBMEXECUTION t where  to_char(tradedate, ''yyyy-mm-dd'')  >= ''" + startDate + "''   and  to_char(tradedate, ''yyyy-mm-dd'')  <= ''" + endDate + "''   and t.typeofdeal=''尝试做市''   group by t.selftradername,t.trademethod')",
         Engine)
 
     # 匯總交易方式
@@ -38,7 +38,7 @@ def GroupDealData(startDate,endDate):
 # 匯總報價數據
 def GroupQuoteData(startDate,endDate):
     QuoteDF = pd.read_sql(
-        "select * from openquery(TEST,'select t.selftradername,sum(t.buyorderqty)/100000000 buyamt,sum(t.sellorderqty)/100000000 sellamt from marketanalysis.CSTPCBMMARKETMAKINGQUOTE  t  where t.transtype=''新报价''   and to_char(quotedate, ''yyyy-mm-dd'')  >= ''" + startDate + "''   and  to_char(quotedate, ''yyyy-mm-dd'')  <= ''" + endDate + "''   group by t.selftradername')",
+        "select * from openquery(TEST1,'select t.selftradername,sum(t.buyorderqty)/100000000 buyamt,sum(t.sellorderqty)/100000000 sellamt from marketanalysis.CSTPCBMMARKETMAKINGQUOTE  t  where t.transtype=''新报价''   and to_char(quotedate, ''yyyy-mm-dd'')  >= ''" + startDate + "''   and  to_char(quotedate, ''yyyy-mm-dd'')  <= ''" + endDate + "''   group by t.selftradername')",
         Engine)
     QuoteDF.SELFTRADERNAME = QuoteDF.SELFTRADERNAME.apply(changeTrader)
     QuoteDF.columns = ['DEPARTMENT', 'BUYAMT', 'SELLAMT']

@@ -46,6 +46,6 @@ def QueryAbnormalDeals(startTime,endTime,deviation,dealyield):
         else:
             return True
     Df['ISNEW'] = Df.DEALBONDNAME.apply(isNew)
-    Df = Df.sort('ISNEW',ascending=False)
+    Df = Df.sort_values('ISNEW',ascending=False)
     Df.TRANSACTTIME = Df.TRANSACTTIME.astype('str')
     return Df.to_json(orient="records")

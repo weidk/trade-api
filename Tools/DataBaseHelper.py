@@ -9,3 +9,5 @@ def getConn(host,user,pwd,db):
 def getEngine(host,user,password,db,port='1433'):
     engine = create_engine('mssql+pymssql://'+user+':'+password+'@'+host+':'+port+'/'+db)
     return engine
+
+

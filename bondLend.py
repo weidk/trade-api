@@ -7,13 +7,18 @@ def bondLendBag(code):
     rawDf = importDataFromSql(code, Engine)
     # 计算新增、待偿还和余额
     plusDf, paybackDf, restDf = calDeatailAmt(rawDf, code)
-    restDf = restDf.reset_index(['日期'])
+    restDf = restDf.reset_index()
+    restDf.columns = ['日期','券面总额']
     restDf.columns = ['date', 'amt']
     restDf['date'] = restDf['date'].astype(str)
+    restDf['code'] = code
     return restDf.to_json(orient="records")
 
 def bondLendBagGK():
-    codes = ['180205','180210','190205','190210']
+    redisValue = r.get('bondlendgk')
+    if redisValue != None:
+        return redisValue
+    codes = ['190210','190215','200205','200210','200215']
     # codes = ['170205','170210','180205','180210','190205']
     tempDf0 = GetCodeDf(codes[0])
     tempDf1 = GetCodeDf(codes[1])
@@ -54,7 +59,8 @@ def bondLendBagGK():
     groupedDf['amt'] = grouped['amt'].sum()
     groupedDf['code'] = '合计'
     CodeDf = CodeDf.append(groupedDf, ignore_index=True)
-    CodeDf = CodeDf.sort('date')
+    # CodeDf = CodeDf.sort('date')
+    CodeDf = CodeDf.sort_values(by = ['date'])
     return CodeDf.to_json(orient="records")
 
 def GetCodeDf(code):
@@ -63,7 +69,8 @@ def GetCodeDf(code):
     rawDf = importDataFromSql(code, Engine)
     # 计算新增、待偿还和余额
     plusDf, paybackDf, restDf = calDeatailAmt(rawDf, code)
-    restDf = restDf.reset_index(['日期'])
+    restDf = restDf.reset_index()
+    restDf.columns = ['日期', '券面总额']
     restDf.columns = ['date', 'amt']
     restDf['date'] = restDf['date'].astype(str)
     restDf['code'] = code
@@ -90,7 +97,7 @@ def importData(fileName):
 
 # 从数据库读取数据
 def importDataFromSql(code,engine):
-    rawDf = pd.read_sql("SELECT * FROM openquery(TEST,'select tradedate 日期,underlyingsymbol 简称, underlyingsecurityid 代码,underlyingqty/100000000 券面总额,securityid 借贷期限 from marketanalysis.CMDSSLMDEALT  where underlyingsecurityid = ''"+code+"'' order by tradedate' )",Engine)
+    rawDf = pd.read_sql("SELECT * FROM openquery(TEST1,'select tradedate 日期,underlyingsymbol 简称, underlyingsecurityid 代码,underlyingqty/100000000 券面总额,securityid 借贷期限 from marketanalysis.CMDSSLMDEALT  where underlyingsecurityid = ''"+code+"'' order by tradedate' )",Engine)
     rawDf['日期'] = rawDf['日期'].apply(lambda x: x.date())  # 转换日期格式
     rawDf['券面总额'] = rawDf['券面总额'].apply(lambda x: float(x))  # 将字符串券面总额转换为浮点数
     return rawDf
@@ -109,7 +116,7 @@ def GetMinusAmt(BondDf):
     # 计算偿还日期
     PayBackDate = BondDf.apply(lambda x: x['日期'] + d.timedelta(days=GetDays(x['借贷期限'])), axis=1)
     # 组合DataFrame，并按时间排序
-    PayBackDf = pd.concat([PayBackDate, BondDf['券面总额']], axis=1).sort(0)
+    PayBackDf = pd.concat([PayBackDate, BondDf['券面总额']], axis=1).sort_values(by=[0])
     return PayBackDf.groupby(0).sum() #日期加总结果
 
 # 获取不同期限对应的天数
@@ -153,3 +160,4 @@ def getRestAmt(plusDf,paybackDf):
 # for code in ['190210']:
 #     print(code)
 #     bondLendToExcel(code)
+# rawDf = pd.read_sql("SELECT * FROM openquery(TEST235,'select tradedate 日期,underlyingsymbol 简称, underlyingsecurityid 代码,underlyingqty/100000000 券面总额,securityid 借贷期限 from CMDSSLMDEALT  where underlyingsecurityid = ''190210'' order by tradedate' )",Engine103)

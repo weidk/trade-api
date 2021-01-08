@@ -1,8 +1,8 @@
 from  heads import *
 # 查询库里所有的持仓
 def getAllPositons():
-    # Position = pd.read_sql("select * from openquery(TEST,'select dealusername,bondname,bondcode,(remainingfacevalue+takesupfacevalue) facevalue,fullprice costFullprice,begindate,backupday from smp_dhzq_new.VTY_BONDPOOL_HIS where type_pool = 5  and backupday = (select max(backupday) from smp_dhzq_new.VTY_BONDPOOL_HIS) and bondname like ''%CP%''  and dealusername = ''危定坤'' ')",Engine)
-    Position = pd.read_sql("select * from openquery(TEST,'select dealusername,bondname,bondcode,(remainingfacevalue+takesupfacevalue) facevalue,fullprice costFullprice,begindate,backupday from smp_dhzq_new.VTY_BONDPOOL_HIS where type_pool = 5  and backupday = (select max(backupday) from smp_dhzq_new.VTY_BONDPOOL_HIS)  ')",Engine)
+    # Position = pd.read_sql("select * from openquery(TEST1,'select dealusername,bondname,bondcode,(remainingfacevalue+takesupfacevalue) facevalue,fullprice costFullprice,begindate,backupday from smp_dhzq_new.VTY_BONDPOOL_HIS where type_pool = 5  and backupday = (select max(backupday) from smp_dhzq_new.VTY_BONDPOOL_HIS) and bondname like ''%CP%''  and dealusername = ''危定坤'' ')",Engine)
+    Position = pd.read_sql("select * from openquery(TEST1,'select dealusername,bondname,bondcode,(remainingfacevalue+takesupfacevalue) facevalue,fullprice costFullprice,begindate,backupday from smp_dhzq_new.VTY_BONDPOOL_HIS where type_pool = 5  and backupday = (select max(backupday) from smp_dhzq_new.VTY_BONDPOOL_HIS)  ')",Engine)
     return Position
 
 # 全价计算到期收益率 y = ((Fv-Pv)/Pv)*(TY/D)

@@ -144,7 +144,7 @@ def BubbleData(start,end):
         "select * from openquery(IBOND,'select * from ( select  t.organizationname,username,sum(t.allocationamt)/10000 amt  from ibond.dsc_bondsaleprofit t where to_char(t.saledate, ''yyyy-mm-dd'') >= ''" + start + "'' and  to_char(t.saledate, ''yyyy-mm-dd'') <= ''" + end + "'' and allocationamt>0     group by  organizationname,username  order by amt desc ) where rownum<=50')",
         Engine)
     Df.AMT = Df.AMT.astype('float')
-    Df = Df.sort('AMT')
+    Df = Df.sort_values('AMT')
     return Df.to_json(orient="records")
 
 # 获取银行关系图
@@ -153,7 +153,7 @@ def BankBubbleData(start,end):
         "select * from openquery(IBOND,'select * from ( select  t.organizationname,username,count(1) amt  from ibond.dsc_bondsaleprofit t where to_char(t.saledate, ''yyyy-mm-dd'') >= ''" + start + "'' and  to_char(t.saledate, ''yyyy-mm-dd'') <= ''" + end + "''    and organizationname like ''%银行%''   group by  organizationname,username  order by amt desc ) where rownum<=50')",
         Engine)
     Df.AMT = Df.AMT.astype('float')
-    Df = Df.sort('AMT')
+    Df = Df.sort_values('AMT')
 
     return Df.to_json(orient="records")
 

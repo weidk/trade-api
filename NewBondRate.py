@@ -6,7 +6,7 @@ def ReadNewbondData(start,end):
     NewBondDf.rate = NewBondDf.rate.astype(float)
     NewBondDf.maturity = NewBondDf.maturity.str.split('+').str.get(0)
     NewBondDf.maturity = NewBondDf.maturity.astype(float)
-    NewBondDf = NewBondDf.sort('maturity')
+    NewBondDf = NewBondDf.sort_values('maturity')
     def ChangeTerm(t):
         term  = ''
         if t< 0.25:
@@ -76,7 +76,7 @@ def ReadNewbondFromMongo(start,end):
     NewBondDf.rate = NewBondDf.rate.astype(float)
     # NewBondDf.maturity = NewBondDf.maturity.str.split('+').str.get(0)
     # NewBondDf.maturity = NewBondDf.maturity.astype(float)
-    NewBondDf = NewBondDf.sort('maturity')
+    NewBondDf = NewBondDf.sort_values('maturity')
 
     def ChangeTerm(t):
         term = ''

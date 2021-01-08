@@ -2,8 +2,8 @@ from heads import *
 
 # 读取做做市量和点差、期限分数及总分
 def CalFinalScore(initiator,date):
-    BPDF = pd.read_sql("select * from openquery(TEST,'select bondcode,floor(avg(t.buyyield-t.sellyield)*100) as bp from marketanalysis.cmdscbmmarketmakerquote  t where to_char(quotedatetime, ''yyyy-mm-dd'') = ''"+date+"'' and bondname like ''%国开%''  and t.initiator = ''"+initiator+"''  group by bondcode order by bondcode')",Engine)
-    AMTDF = pd.read_sql("select * from openquery(TEST,'select bondcode, (avg(t.buytotalfacevalue)/100000000 +avg(t.selltotalfacevalue)/100000000) amt  from marketanalysis.cmdscbmmarketmakerquote  t where to_char(quotedatetime, ''yyyy-mm-dd'') = ''"+date+"'' and bondname like ''%国开%''  and t.initiator = ''"+initiator+"''  group by bondcode order by bondcode')",Engine)
+    BPDF = pd.read_sql("select * from openquery(TEST1,'select bondcode,floor(avg(t.buyyield-t.sellyield)*100) as bp from marketanalysis.cmdscbmmarketmakerquote  t where to_char(quotedatetime, ''yyyy-mm-dd'') = ''"+date+"'' and bondname like ''%国开%''  and t.initiator = ''"+initiator+"''  group by bondcode order by bondcode')",Engine)
+    AMTDF = pd.read_sql("select * from openquery(TEST1,'select bondcode, (avg(t.buytotalfacevalue)/100000000 +avg(t.selltotalfacevalue)/100000000) amt  from marketanalysis.cmdscbmmarketmakerquote  t where to_char(quotedatetime, ''yyyy-mm-dd'') = ''"+date+"'' and bondname like ''%国开%''  and t.initiator = ''"+initiator+"''  group by bondcode order by bondcode')",Engine)
     # 计算点差分数
     def switchSoore(bp):
         if bp<=5:
@@ -59,8 +59,8 @@ def MarketScoreBag():
     maxDate = pd.read_sql("select max(date) from MarketScore",EngineIS)
     maxday = maxDate.astype(str).ix[0, 0]
     # 获取未计算的交易日
-    DS = pd.read_sql("select * from openquery(TEST,'select distinct(to_char(quotedatetime, ''yyyy-mm-dd'')) ds from  marketanalysis.cmdscbmmarketmakerquote where quotedatetime >''"+maxday+"''')",Engine)
-    TimeToCal = DS[DS.DS > maxday].sort(['DS'])
+    DS = pd.read_sql("select * from openquery(TEST1,'select distinct(to_char(quotedatetime, ''yyyy-mm-dd'')) ds from  marketanalysis.cmdscbmmarketmakerquote where quotedatetime >''"+maxday+"''')",Engine)
+    TimeToCal = DS[DS.DS > maxday].sort_values('DS')
     if TimeToCal.shape[0]>0:
         for d in TimeToCal.DS:
             AllToSql(d)

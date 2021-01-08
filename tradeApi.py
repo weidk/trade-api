@@ -108,6 +108,15 @@ def positionstatus():
     except:
         pass
 
+# 查询待上市的券
+@app.route('/api/querytolistingbond')
+def querytolistingbond():
+    try:
+        df = PO.QueryOutstanding()
+        return df
+    except:
+        pass
+
 # 查询明日非现券结算头寸
 @app.route('/api/nonbondinfo')
 def nonbondinfo():
@@ -117,6 +126,25 @@ def nonbondinfo():
     except:
         pass
 
+# 查询借贷头寸
+@app.route('/api/bondlendpos')
+def bondlendpos():
+    try:
+        df = PO.BondLendPosition()
+        return df
+    except:
+        pass
+
+# 查询债券通头寸
+@app.route('/api/bcpositon')
+def bcpositon():
+    try:
+        df = PO.BCSettlementPosition()
+        return df
+    except:
+        pass
+
+
 # 查询净卖空债券
 @app.route('/api/netsellbond')
 def netsellbond():
@@ -125,6 +153,16 @@ def netsellbond():
         return df
     except:
         pass
+
+# 查询未提交头寸的交易员
+@app.route('/api/unsub')
+def unsubs():
+    try:
+        df = PO.getUnSubs()
+        return df
+    except:
+        pass
+
 
 # 修改头寸状态
 @app.route('/api/changepositionstatus', methods=['POST'])
@@ -143,6 +181,16 @@ def netsellbondpost():
         return df
     except:
         pass
+
+@app.route('/api/queryplus1settle', methods=['POST'])
+def queryplus1settle():
+    try:
+        data = request.json
+        df = PO.QueryNextDaySettle(data['trader'])
+        return df
+    except:
+        pass
+
 
 @app.route('/api/nonbondinfopost', methods=['POST'])
 def nonbondinfopost():
@@ -225,8 +273,19 @@ def GetCDPosition():
 # BPM持仓
 @app.route('/api/bpmpositon')
 def GetBPMPosition():
-    df = CD.ReadBPMPosition()
+    # df = CD.ReadBPMPosition()
+    df = CD.CalPosition()
     return df
+
+# 历史BPM持仓
+@app.route('/api/hisbpmpositon', methods=['POST'])
+def GetHisBPMPosition():
+    try:
+        df = CD.ReadHisBPMPosition(request.json)
+        return df
+    except:
+        pass
+
 
 # 结算持仓
 @app.route('/api/settledownpositon', methods=['POST'])
@@ -248,10 +307,62 @@ def GetReportProfit():
     except:
         pass
 
+# 查询报表数据
+@app.route('/api/reprotprofittable', methods=['POST'])
+def GetReportTable():
+    try:
+        df = RC.ReadProfitTableDF(request.json)
+        return df
+    except:
+        pass
+
+# 按久期分组的基点价值
+@app.route('/api/dv01byduration', methods=['POST'])
+def dv01byduration():
+    try:
+        df = RC.DV01byDuration(request.json)
+        return df
+    except:
+        pass
+
+# 投资报表持仓明细
+@app.route('/api/postposdetails', methods=['POST'])
+def postPosDetails():
+    try:
+        df = RC.PosDetails(request.json)
+        return df
+    except:
+        pass
+
 # 报表——债券类型持仓饼状图
 @app.route('/api/reprotpositionpie')
 def GetReportPosition():
     df = RC.PositionComposition()
+    return df
+
+# 获取所有投资报表类型
+@app.route('/api/allinvesttype')
+def Allinvesttype():
+    df = RC.getInvestType()
+    return df
+
+
+# 获取返费数据
+@app.route('/api/getff')
+def getff():
+    df = RC.ReadFF()
+    return df
+
+# 获取回撤数据
+@app.route('/api/getdrawdown')
+def getdrawdown():
+    df = RC.DrawDown()
+    return df
+
+# 获取DV01走势
+@app.route('/api/getdv01ts')
+def getdv01ts():
+    df = RC.GetDV01Ts()
     return df
 
 # 现券市场成交——券种
@@ -635,6 +746,16 @@ def GetReletiveCurve():
     except:
         pass
 
+# 转债相对价值曲线
+@app.route('/api/cbreletivecurve', methods=['POST'])
+def GetCBReletiveCurve():
+    try:
+        date = request.json
+        df = CM.ReadCBRelativePrice(date['start'])
+        return df
+    except:
+        pass
+
 # 绝对价值曲线
 @app.route('/api/absolutecurve', methods=['POST'])
 def GetAbsoluteCurve():
@@ -724,6 +845,16 @@ def convpratio():
     except:
         pass
 
+# ------------------------   转债转股溢价率新  -----------------------------
+@app.route('/api/convprationew', methods=['POST'])
+def convprationew():
+    try:
+        date = request.json
+        rst = LongBond.ConvpRatioNew(date['start'], date['end'])
+        return rst
+    except:
+        pass
+
 # ------------------------   转债个券历史  -----------------------------
 @app.route('/api/cbhistory', methods=['POST'])
 def cbhistory():
@@ -741,8 +872,16 @@ def getcbondlist():
         rst = LongBond.CBondList()
         return rst
     except:
-        pas
+        pass
 
+# ------------------------   转债条款触发情况  -----------------------------
+@app.route('/api/getcbondtrigger')
+def getcbondtrigger():
+    try:
+        rst = LongBond.CBondTrigger()
+        return rst
+    except:
+        pass
 
 # ------------------------   期货持仓变动  -----------------------------
 @app.route('/api/futurepositionchange', methods=['POST'])
@@ -848,7 +987,7 @@ def creditturnoverrate():
 def bondincurve():
     try:
         data = request.json
-        rst = BIC.GetCurve(data['bondtype'])
+        rst = BIC.GetCurve(data['bondtype'],data['queryDate'])
         return rst
     except:
         pass
@@ -880,8 +1019,84 @@ def spreadlatestyield():
     except:
         pass
 
+# ---------------------------------------------------------------
+# -----------------------  利率互换  -----------------------------
+# ---------------------------------------------------------------
+@app.route('/api/irsnomialprinciple')
+def irsnomialprinciple():
+    try:
+        df = IRS.RestNominalPrinciple()
+        return df
+    except:
+        pass
 
+@app.route('/api/getirsdv01')
+def getirsdv01():
+    try:
+        df = IRS.IRSDV01()
+        return df
+    except:
+        pass
 
+# ---------------------------------------------------------------
+# -----------------------  等效收益率曲线  -------------------------
+# ---------------------------------------------------------------
+@app.route('/api/getadjyieldapi')
+def getadjyieldapi():
+    try:
+        df = AY.GeyAdjYield()
+        return df
+    except:
+        pass
+
+# 等效曲线历史
+@app.route('/api/adjyieldhistoryapi', methods=['POST'])
+def adjyieldhistoryapi():
+    try:
+        date = request.json
+        rst = AY.AdjYieldHistory(date['start'], date['end'])
+        return rst
+    except:
+        pass
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # #        资金市场      # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# ------------------------   NCD余额  -----------------------------
+@app.route('/api/ncdbalance', methods=['POST'])
+def ncdbalance():
+    try:
+        date = request.json
+        rst = CASH.ReadNCDBalance(date['start'], date['end'])
+        return rst
+    except:
+        pass
+
+# ------------------------   交易所协议回购  -----------------------------
+@app.route('/api/exchangerate', methods=['POST'])
+def exchangerate():
+    try:
+        date = request.json
+        rst = CASH.ReadExchangeRate(date['start'], date['end'])
+        return rst
+    except:
+        pass
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # 现券当日成交情况日报  # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# 获取现券流动性
+@app.route('/api/getbondflow')
+def getbondflow():
+    df = MD.BondFlowLatest()
+    return df
+
+# 获取现券利差
+@app.route('/api/getspread')
+def getspread():
+    df = MD.ReadSpreadDf()
+    return df
 
 # *******************************************************************
 # *******************************************************************

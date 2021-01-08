@@ -35,7 +35,7 @@ def ToChange(c1,c2):
         return '上调'
 def CalCreditChange(Df):
     Df['change'] = Df.apply(lambda x:ToChange(x['OLDCREDIT'],x['NEWCREDIT']),axis=1)
-    return Df.sort('ISSUER')
+    return Df.sort_values('ISSUER')
 
 # 找到最近有数据的交易日
 def FindTradeDay(day):
@@ -74,7 +74,7 @@ def HidenCreditBag(start,end):
 # ----------------   隐含评级调整历史  ---------------------
 def QueryHidenCreditHistory(code):
     HistoryDf = pd.read_sql("select * from openquery(WINDNEW,'select b.s_info_windcode code, a.tddate,  a.cnbd_creditrating HIDENCREDIT,  b.B_ANAL_YIELD_CNBD EYIELD from (select min(t.trade_dt) tddate, t.cnbd_creditrating  from CBondCurveMembersCNBD t  where t.s_info_windcode = ''"+code+"''  and length(t.cnbd_creditrating) > 0  group by t.cnbd_creditrating  order by tddate) a inner join CBondAnalysisCNBD  b  on a.tddate = b.trade_dt where b.s_info_windcode = ''"+code+"''   and b.B_ANAL_CREDIBILITY=''推荐'' ')",Engine)
-    HistoryDf = HistoryDf.sort('TDDATE')
+    HistoryDf = HistoryDf.sort_values('TDDATE')
     return HistoryDf
 
 # 计算上下调整

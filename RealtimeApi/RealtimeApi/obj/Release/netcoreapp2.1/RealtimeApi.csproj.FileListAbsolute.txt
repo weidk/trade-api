@@ -4,7 +4,6 @@ D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\bin\Release\netcorea
 D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\bin\Release\netcoreapp2.1\RealtimeApi.runtimeconfig.dev.json
 D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\bin\Release\netcoreapp2.1\RealtimeApi.dll
 D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\bin\Release\netcoreapp2.1\RealtimeApi.pdb
-D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\obj\Release\netcoreapp2.1\RealtimeApi.csproj.CoreCompileInputs.cache
 D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\obj\Release\netcoreapp2.1\RealtimeApi.RazorAssemblyInfo.cache
 D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\obj\Release\netcoreapp2.1\RealtimeApi.RazorAssemblyInfo.cs
 D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\obj\Release\netcoreapp2.1\RealtimeApi.AssemblyInfoInputs.cache
@@ -13,3 +12,6 @@ D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\obj\Release\netcorea
 D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\obj\Release\netcoreapp2.1\RealtimeApi.dll
 D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\obj\Release\netcoreapp2.1\RealtimeApi.pdb
 D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\obj\Release\netcoreapp2.1\RealtimeApi.csprojAssemblyReference.cache
+D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\bin\Release\netcoreapp2.1\appsettings.Development.json
+D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\bin\Release\netcoreapp2.1\Properties\launchSettings.json
+D:\workspace\交易接口\trade-api\RealtimeApi\RealtimeApi\obj\Release\netcoreapp2.1\RealtimeApi.genruntimeconfig.cache

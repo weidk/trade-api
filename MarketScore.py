@@ -10,12 +10,15 @@ def ReadScore():
 
 # 国开做市成交数据
 def CalDealAmt(startDate,endDate):
-    DealDF = pd.read_sql("select * from openquery(TEST,'select t.trademethod,t.selftradername,sum(t.totalfacevalue)/100000000 amt from marketanalysis.CSTPCBMEXECUTION t where  to_char(tradedate, ''yyyy-mm-dd'')  >= ''"+startDate+"''   and  to_char(tradedate, ''yyyy-mm-dd'')  <= ''"+endDate+"''   and t.typeofdeal=''尝试做市'' and t.bondname like ''%国开%''  group by t.selftradername,t.trademethod')",Engine)
+    DealDF = pd.read_sql("select * from openquery(TEST1,'select t.trademethod,t.selftradername,sum(t.totalfacevalue)/100000000 amt from marketanalysis.CSTPCBMEXECUTION t where  tradedate  >=  to_date(''"+startDate+"'', ''yyyy-mm-dd'')     and  tradedate  <=  to_date(''"+endDate+"'', ''yyyy-mm-dd'')  and t.typeofdeal=''尝试做市成交''  group by t.selftradername,t.trademethod')",Engine)
     def changeDealType(type):
         switch={
             '撮合' : 'XBOND',
+            '匿名点击' : 'XBOND',
             '请求报价' : '请求',
+            '请求' : '请求',
             '一次点击成交' : '双边',
+            '点击成交' : '双边',
         }
         return switch.get(type,'')
 
@@ -23,9 +26,10 @@ def CalDealAmt(startDate,endDate):
 
     def changeTrader(trader):
         switch={
-            '葛剑鸣' : '资金室',
+            '朱颜' : '资金室',
             '郭宇涵' : '资金室',
             '皮静娟' : '资金室',
+            '温妍超' : '资金室',
         }
         return switch.get(trader,'投资')
 
@@ -37,7 +41,7 @@ def CalDealAmt(startDate,endDate):
 
 # 获取信用做市分数
 def ReadCreditScore():
-    SD = pd.read_sql("select * from openquery(TEST,'select to_char(quotedatetime, ''yyyy-mm-dd'') days, initiator,  (sum(buytotalfacevalue) / 100000000 + sum(selltotalfacevalue) / 100000000) amt  from marketanalysis.cmdscbmmarketmakerquote t  where to_char(quotedatetime, ''yyyy-mm-dd'') >= ''2018-03-01''  and length(t.bondcode) > 6  and t.initiator  in (''东海证券'',''东方证券'',''中信证券'',''中信建投证券'',''第一创业证券'')  and t.transtype = ''新报价'' group by initiator, to_char(quotedatetime, ''yyyy-mm-dd'') order by days')",Engine)
+    SD = pd.read_sql("select * from openquery(TEST1,'select to_char(quotedatetime, ''yyyy-mm-dd'') days, initiator,  (sum(buytotalfacevalue) / 100000000 + sum(selltotalfacevalue) / 100000000) amt  from marketanalysis.cmdscbmmarketmakerquote t  where to_char(quotedatetime, ''yyyy-mm-dd'') >= ''2018-03-01''  and length(t.bondcode) > 6  and t.initiator  in (''东海证券'',''东方证券'',''中信证券'',''中信建投证券'',''第一创业证券'')  and t.transtype = ''新报价'' group by initiator, to_char(quotedatetime, ''yyyy-mm-dd'') order by days')",Engine)
     SD.AMT = SD.AMT.astype('float')
     return SD.to_json(orient='records')
 

@@ -18,6 +18,9 @@ def QueryLatestMat():
 
 # 读取相对价值数据
 def ReadRelativePrice(startday):
+    redisValue = r.get('ralativeprice_' + startday + '_' + dh.today2str())
+    if redisValue != None:
+        return redisValue
     Df = pd.read_sql("select  * from relativepricecomparison where 日期>'"+startday+"'  order by 日期",EngineIS)
     Df = Df.fillna(0)
     ReletiveDf = pd.DataFrame()
@@ -34,7 +37,7 @@ def ReadRelativePrice(startday):
     ReletiveDf.类型 = ReletiveDf.类型.str.replace('中债', '').str.replace('到期收益率', '')
     RCredit = ReletiveDf[ReletiveDf.类型.str.contains('中短期票据')]
     RCredit = RCredit[RCredit.类型.str.contains('1年|3年|5年')]
-    RankDf = ReletiveDf[ReletiveDf.日期==ReletiveDf.日期.max()].sort('相对价值')
+    RankDf = ReletiveDf[ReletiveDf.日期==ReletiveDf.日期.max()].sort_values('相对价值')
 
     return json.dumps({
         '国债':ReletiveDf[ReletiveDf.类型.str.contains('国债')].to_dict(orient='records'),
@@ -54,6 +57,29 @@ def ReadRelativePrice(startday):
         '五年': ReletiveDf[ReletiveDf.类型.str.contains('5年')].to_dict(orient='records'),
         '七年': ReletiveDf[ReletiveDf.类型.str.contains('7年')].to_dict(orient='records'),
         '十年': ReletiveDf[ReletiveDf.类型.str.contains('10年')].to_dict(orient='records'),
+        '排序':RankDf.to_dict(orient='records'),
+        'all': ReletiveDf.to_dict(orient='records'),
+    })
+
+# 读取转债相对价值数据
+def ReadCBRelativePrice(startday):
+    Df = pd.read_sql("select  * from RelatevePriceSWI where 日期>'"+startday+"'  order by 日期",EngineIS)
+    Df = Df.fillna(0)
+    ReletiveDf = pd.DataFrame()
+    for c in Df.columns:
+        if c=='日期':
+            pass
+        else:
+            tempDf = Df.ix[:,['日期',c]]
+            tempDf['类型'] = c
+            tempDf.columns = ['日期', '相对价值', '类型']
+            ReletiveDf = ReletiveDf.append(tempDf, ignore_index=True)
+    ReletiveDf.日期 = ReletiveDf.日期.astype('str')
+    ReletiveDf = ReletiveDf.round(2)
+    ReletiveDf.类型 = ReletiveDf.类型.str.replace('\(申万\)', '')
+    RankDf = ReletiveDf[ReletiveDf.日期==ReletiveDf.日期.max()].sort_values('相对价值')
+
+    return json.dumps({
         '排序':RankDf.to_dict(orient='records'),
         'all': ReletiveDf.to_dict(orient='records'),
     })

@@ -60,24 +60,32 @@ namespace RealtimeApi.Funcs
         //初始化读取当日估值数据
         public static Dictionary<string, double> CBondValues(string constr,string codes)
         {
+            string codestring = "('";
+            foreach(string code in codes.Split(','))
+            {
+                codestring = codestring + code + ".IB','";
+            }
+            codestring = codestring.TrimEnd(new char[] { ',','\'' });
+            codestring = codestring + "')";
             Dictionary<string, double> Cbdict = new Dictionary<string, double>();
             using (SqlConnection db = new SqlConnection(constr))
             {
                 db.Open();
-                string sql = "SELECT max(edate) FROM [msnRobot].[dbo].[bondValue]";
+                string sql = "SELECT max(TRADE_DT) FROM [Invest].[dbo].[CBONDANALYSISCNBD]";
                 SqlDataAdapter DataAdapter = new SqlDataAdapter(sql, db);
                 DataTable Dt = new DataTable();
                 DataAdapter.Fill(Dt);
                 string MaxDate = Dt.Rows[0][0].ToString();
 
-                string sql1 = "SELECT code,eyield FROM [msnRobot].[dbo].[bondValue] where code in " + codes + " and edate = '" + MaxDate + "'";
+                string sql1 = "SELECT  [S_INFO_WINDCODE],[B_ANAL_YIELD_CNBD] FROM [Invest].[dbo].[CBONDANALYSISCNBD] where  [B_ANAL_EXCHANGE] = '银行间债券市场' and  [B_ANAL_CREDIBILITY] = '推荐'   and TRADE_DT = '"+ MaxDate + "'  and [S_INFO_WINDCODE] in " + codestring;
                 SqlDataAdapter DataAdapter1 = new SqlDataAdapter(sql1, db);
                 DataTable Dt1 = new DataTable();
                 DataAdapter1.Fill(Dt1);
             
             foreach(DataRow dr in Dt1.Rows)
             {
-                Cbdict[dr[0].ToString()] = float.Parse(dr[1].ToString());
+                string tempCode = dr[0].ToString().Replace(".IB", "");
+                Cbdict[tempCode] = float.Parse(dr[1].ToString());
             }
             }
             return Cbdict;

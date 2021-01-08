@@ -14,11 +14,11 @@ def TrimTypeData(startDate,endDate):
     groupedDf = DfTypeNew.groupby('机构').sum()
     renameIndex(groupedDf.index)
 
-    TreasruyDf = pd.DataFrame(groupedDf['国债']).sort(columns='国债',ascending=False)
-    PolicyDf = pd.DataFrame(groupedDf['金融债']).sort(columns='金融债', ascending=False)
-    CpDf = pd.DataFrame(groupedDf['短融']).sort(columns='短融', ascending=False)
-    CdDf = pd.DataFrame(groupedDf['存单']).sort(columns='存单', ascending=False)
-    MTNDf = pd.DataFrame(groupedDf['中票/企业债']).sort(columns='中票/企业债', ascending=False)
+    TreasruyDf = pd.DataFrame(groupedDf['国债']).sort_values('国债',ascending=False)
+    PolicyDf = pd.DataFrame(groupedDf['金融债']).sort_values('金融债', ascending=False)
+    CpDf = pd.DataFrame(groupedDf['短融']).sort_values('短融', ascending=False)
+    CdDf = pd.DataFrame(groupedDf['存单']).sort_values('存单', ascending=False)
+    MTNDf = pd.DataFrame(groupedDf['中票/企业债']).sort_values('中票/企业债', ascending=False)
 
     TreasruyDf = TreasruyDf.reset_index()
     PolicyDf = PolicyDf.reset_index()
@@ -76,11 +76,11 @@ def TrimTermData(startDate,endDate):
     groupedDf = DfTermNew.groupby('机构').sum()
     renameIndex(groupedDf.index)
 
-    OneDF = pd.DataFrame(groupedDf['一年']).sort(columns='一年',ascending=False)
-    ThreeDF = pd.DataFrame(groupedDf['三年']).sort(columns='三年',ascending=False)
-    FiveDF = pd.DataFrame(groupedDf['五年']).sort(columns='五年',ascending=False)
-    TenDF = pd.DataFrame(groupedDf['七年&十年']).sort(columns='七年&十年',ascending=False)
-    LongDF = pd.DataFrame(groupedDf['大于十年']).sort(columns='大于十年',ascending=False)
+    OneDF = pd.DataFrame(groupedDf['一年']).sort_values('一年',ascending=False)
+    ThreeDF = pd.DataFrame(groupedDf['三年']).sort_values('三年',ascending=False)
+    FiveDF = pd.DataFrame(groupedDf['五年']).sort_values('五年',ascending=False)
+    TenDF = pd.DataFrame(groupedDf['七年&十年']).sort_values('七年&十年',ascending=False)
+    LongDF = pd.DataFrame(groupedDf['大于十年']).sort_values('大于十年',ascending=False)
 
     OneDF = OneDF.reset_index()
     ThreeDF = ThreeDF.reset_index()
@@ -123,10 +123,10 @@ def QueryDeal(endDate,bondname):
 
         return False
     if is_number(bondname):
-        DF = pd.read_sql("SELECT * FROM openquery(TEST,'select  DEALBONDNAME,DEALBONDCODE, DEALCLEANPRICE, DEALYIELD, DEALTOTALFACEVALUE/10000 DEALTOTALFACEVALUE,TRADEMETHOD, TRANSACTTIME from marketanalysis.CMDSCBMDEALT where to_char(dealdate, ''yyyy-mm-dd'') >= ''"+endDate+"'' and   DEALBONDCODE like ''%"+bondname+"%''  order by TRANSACTTIME ' )",Engine)
+        DF = pd.read_sql("SELECT * FROM openquery(TEST1,'select  DEALBONDNAME,DEALBONDCODE, DEALCLEANPRICE, DEALYIELD, DEALTOTALFACEVALUE/10000 DEALTOTALFACEVALUE,TRADEMETHOD, TRANSACTTIME from marketanalysis.CMDSCBMDEALT where to_char(dealdate, ''yyyy-mm-dd'') >= ''"+endDate+"'' and   DEALBONDCODE like ''%"+bondname+"%''  order by TRANSACTTIME ' )",Engine)
     else:
         DF = pd.read_sql(
-            "SELECT * FROM openquery(TEST,'select  DEALBONDNAME,DEALBONDCODE, DEALCLEANPRICE, DEALYIELD, DEALTOTALFACEVALUE/10000 DEALTOTALFACEVALUE,TRADEMETHOD, TRANSACTTIME from marketanalysis.CMDSCBMDEALT where to_char(dealdate, ''yyyy-mm-dd'') >= ''" + endDate + "'' and   DEALBONDNAME like ''%" + bondname + "%''  order by TRANSACTTIME ' )",
+            "SELECT * FROM openquery(TEST1,'select  DEALBONDNAME,DEALBONDCODE, DEALCLEANPRICE, DEALYIELD, DEALTOTALFACEVALUE/10000 DEALTOTALFACEVALUE,TRADEMETHOD, TRANSACTTIME from marketanalysis.CMDSCBMDEALT where to_char(dealdate, ''yyyy-mm-dd'') >= ''" + endDate + "'' and   DEALBONDNAME like ''%" + bondname + "%''  order by TRANSACTTIME ' )",
             Engine)
     DF.TRANSACTTIME = DF.TRANSACTTIME.astype(str)
     return DF.to_json(orient="records")
@@ -205,7 +205,8 @@ def QueryTSDataNew(Ins,type,term):
     # Df['type1'] = Df.type.cumsum()
     Df['tongbi'] = Df.apply(lambda x: CalTB(x, Df), axis=1)
     Df['tongbi'] = Df['tongbi'].fillna(method='pad')
-    Df['MA5-MA20'] = pd.rolling_mean(Df.type, 5) - pd.rolling_mean(Df.type, 20)
+    # Df['MA5-MA20'] = pd.rolling_mean(Df.type, 5) - pd.rolling_mean(Df.type, 20)
+    Df['MA5-MA20'] = Df.type.rolling(5).mean()- Df.type.rolling(20).mean()
     Df.date = Df.date.astype(str)
     return Df.to_json(orient='records')
 
@@ -240,7 +241,11 @@ def switchType(argument):
 def switchTypeNew(argument):
     switcher = {
         "国债":'TreasuryOld+TreasuryNew',
+        "国债新券":'TreasuryNew',
+        "国债老券":'TreasuryOld',
         "金融债":'PolicyOld+PolicyNew',
+        "金融债新券":'PolicyNew',
+        "金融债老券":'PolicyOld',
         "地方债":'LocalGoverment',
         "存单":'CDS',
         "ABS":'ABS',
@@ -282,7 +287,7 @@ def NewData(startDate,endDate):
     GroupDf['Treasury'] = GroupDf['TreasuryNew'] + GroupDf['TreasuryOld']
     GroupDf['Policy'] = GroupDf['PolicyNew'] + GroupDf['PolicyOld']
     GroupDf['CPMTNCorporate'] = GroupDf['MTN'] + GroupDf['CP'] + GroupDf['Corporate']
-    GroupDf = GroupDf.ix[:, ['InsType', 'Term','Treasury', 'Policy','LocalGoverment', 'CDS','CPMTNCorporate', 'ABS']]
+    GroupDf = GroupDf.ix[:, ['InsType', 'Term','Treasury','TreasuryNew','TreasuryOld', 'Policy','PolicyNew','PolicyOld','LocalGoverment', 'CDS','CPMTNCorporate', 'ABS']]
     CDS = GroupDf.ix[:,['InsType','CDS']].groupby('InsType').sum().reset_index()
     ABS = GroupDf.ix[:,['InsType','ABS']].groupby('InsType').sum().reset_index()
     MTN = GroupDf.ix[:,['InsType','Term','CPMTNCorporate']]
@@ -311,7 +316,25 @@ def CalTB(x,Df):
 # for bondname in Df.名称:
 #     print(bondname)
 #     rst = pd.read_sql(
-#         "SELECT * FROM openquery(TEST,'select  DEALBONDNAME,DEALBONDCODE, DEALCLEANPRICE, DEALYIELD, DEALTOTALFACEVALUE/10000 DEALTOTALFACEVALUE,TRADEMETHOD, TRANSACTTIME from marketanalysis.CMDSCBMDEALT where to_char(dealdate, ''yyyy-mm-dd'') >= ''" + endDate + "'' and   DEALBONDNAME like ''%" + bondname + "%''  order by TRANSACTTIME ' )",
+#         "SELECT * FROM openquery(TEST1,'select  DEALBONDNAME,DEALBONDCODE, DEALCLEANPRICE, DEALYIELD, DEALTOTALFACEVALUE/10000 DEALTOTALFACEVALUE,TRADEMETHOD, TRANSACTTIME from marketanalysis.CMDSCBMDEALT where to_char(dealdate, ''yyyy-mm-dd'') >= ''" + endDate + "'' and   DEALBONDNAME like ''%" + bondname + "%''  order by TRANSACTTIME ' )",
 #         Engine)
 #     rst.to_excel(writer,bondname)
 # writer.save()
+
+
+# 当日现券流动性
+def BondFlowLatest():
+    Df = pd.read_sql("select * from BasicInfo where Date = (select max(Date) from BasicInfo)",EngineIS)
+    Df.fillna(0,inplace=True)
+    Df.DealTimes = Df.DealTimes.astype('int')
+    Df = Df.sort_values('DealTimes',ascending=False)
+    Df.Date = Df.Date.astype('str')
+    return Df.to_json(orient="records")
+
+# 当日现券利差
+def ReadSpreadDf():
+    Df = pd.read_sql("select * from SpreadDf where Date = (select max(Date) from SpreadDf)",EngineIS)
+    Df.fillna(0,inplace=True)
+    Df = Df.sort_values('PercentileMin',ascending=False)
+    Df.Date = Df.Date.astype('str')
+    return Df.to_json(orient="records")
